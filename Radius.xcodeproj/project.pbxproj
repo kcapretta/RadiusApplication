@@ -1,0 +1,1125 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		104548889029F6D329587EAE /* Pods_RadiusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BE440EEF6F51BDBFBC7772 /* Pods_RadiusTests.framework */; };
+		9438976AF45EE47FE5AFF1D5 /* Pods_Radius_RadiusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E20224FD96232DC13D7B5A91 /* Pods_Radius_RadiusUITests.framework */; };
+		9B055AB5238E275A00516AE7 /* datingOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B055AB4238E275A00516AE7 /* datingOptionViewController.swift */; };
+		9B0D3600238234BE0074783C /* RDHiddenVisibleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0D35FF238234BE0074783C /* RDHiddenVisibleButton.swift */; };
+		9B11F5892374950A00346D54 /* introductionTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B11F5882374950A00346D54 /* introductionTextViewController.swift */; };
+		9B149C0F238D9707005315CB /* socialOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B149C0E238D9707005315CB /* socialOptionsViewController.swift */; };
+		9B149C11238DC348005315CB /* socialOptionsIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B149C10238DC348005315CB /* socialOptionsIntroViewController.swift */; };
+		9B149C13238DC4A3005315CB /* RadiusConceptFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B149C12238DC4A3005315CB /* RadiusConceptFile.swift */; };
+		9B14C93823D25924002129C6 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B14C93723D25924002129C6 /* TestExtensions.swift */; };
+		9B18908123DBA77E00085337 /* GeofenceLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B18908023DBA77E00085337 /* GeofenceLocations.swift */; };
+		9B1CFE892370B3BB0035CB73 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CFE882370B3BB0035CB73 /* signupViewController.swift */; };
+		9B1CFE8B2370B3CB0035CB73 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1CFE8A2370B3CB0035CB73 /* loginViewController.swift */; };
+		9B1CFE942370FC380035CB73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B1CFE932370FC380035CB73 /* GoogleService-Info.plist */; };
+		9B21147A239F4986008385F8 /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B211479239F4986008385F8 /* Geotification.swift */; };
+		9B2162B72374875900CACBA9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2162B62374875900CACBA9 /* Launch Screen.storyboard */; };
+		9B24A85C237DBF7C0047A395 /* PhotoUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24A85B237DBF7C0047A395 /* PhotoUploadViewController.swift */; };
+		9B298F5B23AC01520078B171 /* datingInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B298F5A23AC01520078B171 /* datingInterestsViewController.swift */; };
+		9B2F9B3323D78A3700D9370A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2F9B3223D78A3700D9370A /* PopUpViewController.swift */; };
+		9B2FF70B23A58BA80084F412 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2FF70A23A58BA80084F412 /* EditProfileViewController.swift */; };
+		9B2FF70D23A58C680084F412 /* EditQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2FF70C23A58C680084F412 /* EditQuestionsViewController.swift */; };
+		9B35F7182394AC9500A07C3C /* datingEthnicityPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35F7172394AC9500A07C3C /* datingEthnicityPreferencesViewController.swift */; };
+		9B35F71A2394BDAF00A07C3C /* datingReligionPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35F7192394BDAF00A07C3C /* datingReligionPreferencesViewController.swift */; };
+		9B35F71C23956C8400A07C3C /* friendshipGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B35F71B23956C8400A07C3C /* friendshipGenderViewController.swift */; };
+		9B3741ED23DCF48C005B1D57 /* RadiusMapLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3741EC23DCF48C005B1D57 /* RadiusMapLocationViewController.swift */; };
+		9B39A4F823A69B7B0070C4A7 /* ViewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39A4F723A69B7B0070C4A7 /* ViewProfileViewController.swift */; };
+		9B39A4FB23A6CC8C0070C4A7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39A4FA23A6CC8C0070C4A7 /* BaseViewController.swift */; };
+		9B3DAB8923DD036F0018C0C4 /* GeotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DAB8823DD036F0018C0C4 /* GeotificationsViewController.swift */; };
+		9B3DAB8B23DD03C60018C0C4 /* AddGeotificationViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DAB8A23DD03C60018C0C4 /* AddGeotificationViewControllerDelegate.swift */; };
+		9B49A483239AECBA001C0FC5 /* FriendsControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49A482239AECBA001C0FC5 /* FriendsControllerHelper.swift */; };
+		9B49A486239AF7D7001C0FC5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B49A484239AF7D7001C0FC5 /* Model.xcdatamodeld */; };
+		9B49CCC223CE94260090D72B /* HiddenVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49CCC123CE94260090D72B /* HiddenVisible.swift */; };
+		9B63248523AFF18C0089639D /* PickerViewDataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63248423AFF18C0089639D /* PickerViewDataSources.swift */; };
+		9B63248723AFFAAD0089639D /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63248623AFFAAD0089639D /* UIImageView+Extensions.swift */; };
+		9B71FE90239B2B4000E9CF32 /* ChatLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71FE8F239B2B4000E9CF32 /* ChatLogViewController.swift */; };
+		9B71FE92239B376A00E9CF32 /* CustomTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B71FE91239B376A00E9CF32 /* CustomTabBarViewController.swift */; };
+		9B72CA7023E51720001C5754 /* InterestedInCollectionViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B72CA6F23E51720001C5754 /* InterestedInCollectionViewCollectionViewCell.swift */; };
+		9B77F8E923A082650002885F /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B77F8E823A082650002885F /* QuestionsViewController.swift */; };
+		9B7D6DB223B27B480078DF21 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7D6DB123B27B480078DF21 /* HomeTabBarController.swift */; };
+		9B8F8296239AB8B600EC3BE7 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8F8295239AB8B600EC3BE7 /* FriendsController.swift */; };
+		9B9501672375E6090019E236 /* entryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9501662375E6090019E236 /* entryPageViewController.swift */; };
+		9B95016923761C580019E236 /* profilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B95016823761C580019E236 /* profilePageViewController.swift */; };
+		9BA692A723BC13A3009B66FF /* UserInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA692A623BC13A2009B66FF /* UserInfoCollectionViewCell.swift */; };
+		9BAA8DDA23997CE600810964 /* friendshipReligionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAA8DD923997CE600810964 /* friendshipReligionViewController.swift */; };
+		9BAE8F3923A14D150006B646 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE8F3823A14D150006B646 /* AccountViewController.swift */; };
+		9BAE8F3B23A14DC30006B646 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE8F3A23A14DC30006B646 /* SettingsViewController.swift */; };
+		9BAE8F3D23A14F780006B646 /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BAE8F3C23A14F780006B646 /* HelpCenterViewController.swift */; };
+		9BB437ED23C124D7006F92B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BB437EC23C124D7006F92B7 /* MapKit.framework */; };
+		9BB8872823E1380000E30FC7 /* RadiusLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8872723E1380000E30FC7 /* RadiusLocations.swift */; };
+		9BB8AC702368BFF600BB6136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8AC6F2368BFF600BB6136 /* AppDelegate.swift */; };
+		9BB8AC722368BFF600BB6136 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8AC712368BFF600BB6136 /* SceneDelegate.swift */; };
+		9BB8AC742368BFF600BB6136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB8AC732368BFF600BB6136 /* ViewController.swift */; };
+		9BB8AC772368BFF600BB6136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8AC752368BFF600BB6136 /* Main.storyboard */; };
+		9BB8AC792368BFF900BB6136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB8AC782368BFF900BB6136 /* Assets.xcassets */; };
+		9BC0564B23BA9C1000D8538F /* HiddenVisibleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0564A23BA9C1000D8538F /* HiddenVisibleViewController.swift */; };
+		9BC3C88423807CA000802D62 /* informationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC3C88323807CA000802D62 /* informationViewController.swift */; };
+		9BC4DBBA239C49B8003B8296 /* Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4DBB9239C49B8003B8296 /* Ref.swift */; };
+		9BCEF3BF2394679800ED4B56 /* preferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCEF3BE2394679800ED4B56 /* preferencesViewController.swift */; };
+		9BD8214923B514920023CA22 /* LikePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD8214823B514920023CA22 /* LikePageViewController.swift */; };
+		9BD985D82371E53D00881C75 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD985D72371E53D00881C75 /* Constants.swift */; };
+		9BD985DE2371F41200881C75 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD985DD2371F41200881C75 /* Utilities.swift */; };
+		9BE15558239C641500AE3BF6 /* PageFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE15552239C641500AE3BF6 /* PageFourViewController.swift */; };
+		9BE15559239C641500AE3BF6 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE15553239C641500AE3BF6 /* MainPageViewController.swift */; };
+		9BE1555A239C641500AE3BF6 /* PagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE15554239C641500AE3BF6 /* PagesViewController.swift */; };
+		9BE1555B239C641500AE3BF6 /* PageOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE15555239C641500AE3BF6 /* PageOneViewController.swift */; };
+		9BE2300A23A85585008E355B /* ConnectionPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2300923A85585008E355B /* ConnectionPreferencesViewController.swift */; };
+		9BE2300C23A85E26008E355B /* FirebaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE2300B23A85E26008E355B /* FirebaseTest.swift */; };
+		9BE85D472389C6DA00EDB08D /* forgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE85D462389C6DA00EDB08D /* forgotPasswordViewController.swift */; };
+		9BE85D4C2389F59800EDB08D /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE85D4B2389F59800EDB08D /* FirebaseFunctions.swift */; };
+		9BE85D4F2389F78200EDB08D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE85D4E2389F78200EDB08D /* User.swift */; };
+		F00E15BE2885FFB16C39BEC5 /* Pods_Radius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D6DB96DCE780BC99ECCE4F /* Pods_Radius.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9BB8AC832368BFF900BB6136 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BB8AC642368BFF600BB6136 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BB8AC6B2368BFF600BB6136;
+			remoteInfo = Radius;
+		};
+		9BB8AC8E2368BFF900BB6136 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9BB8AC642368BFF600BB6136 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9BB8AC6B2368BFF600BB6136;
+			remoteInfo = Radius;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14BE440EEF6F51BDBFBC7772 /* Pods_RadiusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadiusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABE5B552E11DA90C2DF751F /* Pods-RadiusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiusTests.debug.xcconfig"; path = "Target Support Files/Pods-RadiusTests/Pods-RadiusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		452968F29F6E4C83F5654BE6 /* Pods-RadiusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadiusTests.release.xcconfig"; path = "Target Support Files/Pods-RadiusTests/Pods-RadiusTests.release.xcconfig"; sourceTree = "<group>"; };
+		4A10C6CF3BAA08DC2FD78B6D /* Pods-Radius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius.release.xcconfig"; path = "Target Support Files/Pods-Radius/Pods-Radius.release.xcconfig"; sourceTree = "<group>"; };
+		79D6DB96DCE780BC99ECCE4F /* Pods_Radius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Radius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B055AB4238E275A00516AE7 /* datingOptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datingOptionViewController.swift; sourceTree = "<group>"; wrapsLines = 1; };
+		9B0D35FF238234BE0074783C /* RDHiddenVisibleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHiddenVisibleButton.swift; sourceTree = "<group>"; };
+		9B11F5882374950A00346D54 /* introductionTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = introductionTextViewController.swift; sourceTree = "<group>"; };
+		9B149C0E238D9707005315CB /* socialOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialOptionsViewController.swift; sourceTree = "<group>"; };
+		9B149C10238DC348005315CB /* socialOptionsIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = socialOptionsIntroViewController.swift; sourceTree = "<group>"; };
+		9B149C12238DC4A3005315CB /* RadiusConceptFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusConceptFile.swift; sourceTree = "<group>"; };
+		9B14C93723D25924002129C6 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		9B18908023DBA77E00085337 /* GeofenceLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceLocations.swift; sourceTree = "<group>"; };
+		9B1CFE882370B3BB0035CB73 /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		9B1CFE8A2370B3CB0035CB73 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		9B1CFE932370FC380035CB73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B211479239F4986008385F8 /* Geotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		9B2162B62374875900CACBA9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9B24A85B237DBF7C0047A395 /* PhotoUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoUploadViewController.swift; sourceTree = "<group>"; };
+		9B298F5A23AC01520078B171 /* datingInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datingInterestsViewController.swift; sourceTree = "<group>"; };
+		9B2F9B3223D78A3700D9370A /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		9B2FF70A23A58BA80084F412 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		9B2FF70C23A58C680084F412 /* EditQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionsViewController.swift; sourceTree = "<group>"; };
+		9B35F7172394AC9500A07C3C /* datingEthnicityPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datingEthnicityPreferencesViewController.swift; sourceTree = "<group>"; };
+		9B35F7192394BDAF00A07C3C /* datingReligionPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = datingReligionPreferencesViewController.swift; sourceTree = "<group>"; };
+		9B35F71B23956C8400A07C3C /* friendshipGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendshipGenderViewController.swift; sourceTree = "<group>"; };
+		9B3741EC23DCF48C005B1D57 /* RadiusMapLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusMapLocationViewController.swift; sourceTree = "<group>"; };
+		9B39A4F723A69B7B0070C4A7 /* ViewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileViewController.swift; sourceTree = "<group>"; };
+		9B39A4FA23A6CC8C0070C4A7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9B3DAB8823DD036F0018C0C4 /* GeotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeotificationsViewController.swift; sourceTree = "<group>"; };
+		9B3DAB8A23DD03C60018C0C4 /* AddGeotificationViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGeotificationViewControllerDelegate.swift; sourceTree = "<group>"; };
+		9B3FCAA32384DED600D7B75A /* Radius.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Radius.entitlements; sourceTree = "<group>"; };
+		9B49A482239AECBA001C0FC5 /* FriendsControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsControllerHelper.swift; sourceTree = "<group>"; };
+		9B49A485239AF7D7001C0FC5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		9B49CCC123CE94260090D72B /* HiddenVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenVisible.swift; sourceTree = "<group>"; };
+		9B63248423AFF18C0089639D /* PickerViewDataSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewDataSources.swift; sourceTree = "<group>"; };
+		9B63248623AFFAAD0089639D /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		9B71FE8F239B2B4000E9CF32 /* ChatLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogViewController.swift; sourceTree = "<group>"; };
+		9B71FE91239B376A00E9CF32 /* CustomTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarViewController.swift; sourceTree = "<group>"; };
+		9B72CA6F23E51720001C5754 /* InterestedInCollectionViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedInCollectionViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		9B77F8E823A082650002885F /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		9B7D6DB123B27B480078DF21 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		9B8F8295239AB8B600EC3BE7 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		9B9501662375E6090019E236 /* entryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = entryPageViewController.swift; sourceTree = "<group>"; };
+		9B95016823761C580019E236 /* profilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profilePageViewController.swift; sourceTree = "<group>"; };
+		9BA692A323BC10D1009B66FF /* Radius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radius.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA692A423BC10D1009B66FF /* RadiusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadiusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA692A523BC10D1009B66FF /* RadiusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadiusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA692A623BC13A2009B66FF /* UserInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		9BAA8DD923997CE600810964 /* friendshipReligionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendshipReligionViewController.swift; sourceTree = "<group>"; };
+		9BAE8F3823A14D150006B646 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		9BAE8F3A23A14DC30006B646 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9BAE8F3C23A14F780006B646 /* HelpCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterViewController.swift; sourceTree = "<group>"; };
+		9BB437EC23C124D7006F92B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9BB8872723E1380000E30FC7 /* RadiusLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadiusLocations.swift; sourceTree = "<group>"; };
+		9BB8AC6F2368BFF600BB6136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BB8AC712368BFF600BB6136 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9BB8AC732368BFF600BB6136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BB8AC762368BFF600BB6136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BB8AC782368BFF900BB6136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BB8AC7D2368BFF900BB6136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC0564A23BA9C1000D8538F /* HiddenVisibleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenVisibleViewController.swift; sourceTree = "<group>"; };
+		9BC3C88323807CA000802D62 /* informationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = informationViewController.swift; sourceTree = "<group>"; };
+		9BC4DBB9239C49B8003B8296 /* Ref.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ref.swift; sourceTree = "<group>"; };
+		9BCEF3BE2394679800ED4B56 /* preferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = preferencesViewController.swift; sourceTree = "<group>"; };
+		9BD8214823B514920023CA22 /* LikePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePageViewController.swift; sourceTree = "<group>"; };
+		9BD985D72371E53D00881C75 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9BD985DD2371F41200881C75 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9BE15552239C641500AE3BF6 /* PageFourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageFourViewController.swift; path = SwipePages/PageFourViewController.swift; sourceTree = "<group>"; };
+		9BE15553239C641500AE3BF6 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		9BE15554239C641500AE3BF6 /* PagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagesViewController.swift; sourceTree = "<group>"; };
+		9BE15555239C641500AE3BF6 /* PageOneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageOneViewController.swift; path = SwipePages/PageOneViewController.swift; sourceTree = "<group>"; };
+		9BE2300923A85585008E355B /* ConnectionPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionPreferencesViewController.swift; sourceTree = "<group>"; };
+		9BE2300B23A85E26008E355B /* FirebaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTest.swift; sourceTree = "<group>"; };
+		9BE85D462389C6DA00EDB08D /* forgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forgotPasswordViewController.swift; sourceTree = "<group>"; };
+		9BE85D4B2389F59800EDB08D /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9BE85D4E2389F78200EDB08D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ABA1EB7C6F342871AB0EAA40 /* Pods-Radius-RadiusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius-RadiusUITests.debug.xcconfig"; path = "Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C62F20A72EDEA9F295F412C2 /* Pods-Radius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius.debug.xcconfig"; path = "Target Support Files/Pods-Radius/Pods-Radius.debug.xcconfig"; sourceTree = "<group>"; };
+		E20224FD96232DC13D7B5A91 /* Pods_Radius_RadiusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Radius_RadiusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCA5C21CE0E4AEC76414DDB5 /* Pods-Radius-RadiusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius-RadiusUITests.release.xcconfig"; path = "Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9BB8AC692368BFF600BB6136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BB437ED23C124D7006F92B7 /* MapKit.framework in Frameworks */,
+				F00E15BE2885FFB16C39BEC5 /* Pods_Radius.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB8AC7F2368BFF900BB6136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				104548889029F6D329587EAE /* Pods_RadiusTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB8AC8A2368BFF900BB6136 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9438976AF45EE47FE5AFF1D5 /* Pods_Radius_RadiusUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15ADF9997D9104A4D78CC2EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C62F20A72EDEA9F295F412C2 /* Pods-Radius.debug.xcconfig */,
+				4A10C6CF3BAA08DC2FD78B6D /* Pods-Radius.release.xcconfig */,
+				ABA1EB7C6F342871AB0EAA40 /* Pods-Radius-RadiusUITests.debug.xcconfig */,
+				FCA5C21CE0E4AEC76414DDB5 /* Pods-Radius-RadiusUITests.release.xcconfig */,
+				3ABE5B552E11DA90C2DF751F /* Pods-RadiusTests.debug.xcconfig */,
+				452968F29F6E4C83F5654BE6 /* Pods-RadiusTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1A9370EE01C7C15C02D0A4F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BB437EC23C124D7006F92B7 /* MapKit.framework */,
+				79D6DB96DCE780BC99ECCE4F /* Pods_Radius.framework */,
+				E20224FD96232DC13D7B5A91 /* Pods_Radius_RadiusUITests.framework */,
+				14BE440EEF6F51BDBFBC7772 /* Pods_RadiusTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B11F5872374946E00346D54 /* NewProfile */ = {
+			isa = PBXGroup;
+			children = (
+				9B11F5882374950A00346D54 /* introductionTextViewController.swift */,
+				9B149C10238DC348005315CB /* socialOptionsIntroViewController.swift */,
+				9B149C0E238D9707005315CB /* socialOptionsViewController.swift */,
+				9B055AB4238E275A00516AE7 /* datingOptionViewController.swift */,
+				9B24A85B237DBF7C0047A395 /* PhotoUploadViewController.swift */,
+				9BC3C88323807CA000802D62 /* informationViewController.swift */,
+				9BE15555239C641500AE3BF6 /* PageOneViewController.swift */,
+				9BE15552239C641500AE3BF6 /* PageFourViewController.swift */,
+				9B77F8E823A082650002885F /* QuestionsViewController.swift */,
+				9BE1554F239C641500AE3BF6 /* SwipePages */,
+			);
+			path = NewProfile;
+			sourceTree = "<group>";
+		};
+		9B311AA7236CFB8E00EA99A1 /* EntryPages */ = {
+			isa = PBXGroup;
+			children = (
+				9B2162B62374875900CACBA9 /* Launch Screen.storyboard */,
+				9B9501662375E6090019E236 /* entryPageViewController.swift */,
+				9B1CFE882370B3BB0035CB73 /* signupViewController.swift */,
+				9B1CFE8A2370B3CB0035CB73 /* loginViewController.swift */,
+				9BE85D462389C6DA00EDB08D /* forgotPasswordViewController.swift */,
+			);
+			path = EntryPages;
+			sourceTree = "<group>";
+		};
+		9B311AAA236E62E200EA99A1 /* RadiusMap */ = {
+			isa = PBXGroup;
+			children = (
+				9B3741EC23DCF48C005B1D57 /* RadiusMapLocationViewController.swift */,
+				9BB8872723E1380000E30FC7 /* RadiusLocations.swift */,
+				9B211479239F4986008385F8 /* Geotification.swift */,
+				9B3DAB8A23DD03C60018C0C4 /* AddGeotificationViewControllerDelegate.swift */,
+				9B3DAB8823DD036F0018C0C4 /* GeotificationsViewController.swift */,
+			);
+			path = RadiusMap;
+			sourceTree = "<group>";
+		};
+		9B3653BA239AB64B00E1BC58 /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+				9B8F8295239AB8B600EC3BE7 /* FriendsController.swift */,
+				9B71FE8F239B2B4000E9CF32 /* ChatLogViewController.swift */,
+				9BE2300B23A85E26008E355B /* FirebaseTest.swift */,
+				9B49A482239AECBA001C0FC5 /* FriendsControllerHelper.swift */,
+			);
+			name = Messenger;
+			path = ../Messenger;
+			sourceTree = "<group>";
+		};
+		9B39A4F923A6CC740070C4A7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B39A4FA23A6CC8C0070C4A7 /* BaseViewController.swift */,
+				9B63248623AFFAAD0089639D /* UIImageView+Extensions.swift */,
+				9B14C93723D25924002129C6 /* TestExtensions.swift */,
+				9BD985DD2371F41200881C75 /* Utilities.swift */,
+				9BD985D72371E53D00881C75 /* Constants.swift */,
+				9B0D35FF238234BE0074783C /* RDHiddenVisibleButton.swift */,
+				9BC4DBB9239C49B8003B8296 /* Ref.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B7D6DB023B27B1E0078DF21 /* BottomNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				9BAE8F3A23A14DC30006B646 /* SettingsViewController.swift */,
+				9B7D6DB123B27B480078DF21 /* HomeTabBarController.swift */,
+				9BD8214823B514920023CA22 /* LikePageViewController.swift */,
+				9B71FE91239B376A00E9CF32 /* CustomTabBarViewController.swift */,
+				9BB8AC732368BFF600BB6136 /* ViewController.swift */,
+			);
+			path = BottomNavigationBar;
+			sourceTree = "<group>";
+		};
+		9BAE8F3723A14C9B0006B646 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9BC0564A23BA9C1000D8538F /* HiddenVisibleViewController.swift */,
+				9B39A4F723A69B7B0070C4A7 /* ViewProfileViewController.swift */,
+				9B2FF70A23A58BA80084F412 /* EditProfileViewController.swift */,
+				9B2FF70C23A58C680084F412 /* EditQuestionsViewController.swift */,
+				9B95016823761C580019E236 /* profilePageViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9BB8AC632368BFF600BB6136 = {
+			isa = PBXGroup;
+			children = (
+				9BB8AC6E2368BFF600BB6136 /* Radius */,
+				15ADF9997D9104A4D78CC2EA /* Pods */,
+				1A9370EE01C7C15C02D0A4F2 /* Frameworks */,
+				9BA692A323BC10D1009B66FF /* Radius.app */,
+				9BA692A423BC10D1009B66FF /* RadiusTests.xctest */,
+				9BA692A523BC10D1009B66FF /* RadiusUITests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		9BB8AC6E2368BFF600BB6136 /* Radius */ = {
+			isa = PBXGroup;
+			children = (
+				9BB8AC712368BFF600BB6136 /* SceneDelegate.swift */,
+				9BB8AC6F2368BFF600BB6136 /* AppDelegate.swift */,
+				9B2F9B3223D78A3700D9370A /* PopUpViewController.swift */,
+				9BB8AC752368BFF600BB6136 /* Main.storyboard */,
+				9B3FCAA32384DED600D7B75A /* Radius.entitlements */,
+				9B1CFE932370FC380035CB73 /* GoogleService-Info.plist */,
+				9BB8AC7D2368BFF900BB6136 /* Info.plist */,
+				9B49A484239AF7D7001C0FC5 /* Model.xcdatamodeld */,
+				9BE85D4A2389F58400EDB08D /* Firebase Networking */,
+				9BE85D4D2389F77400EDB08D /* Models */,
+				9BD985DF2371FFA800881C75 /* Misc */,
+				9B311AA7236CFB8E00EA99A1 /* EntryPages */,
+				9B11F5872374946E00346D54 /* NewProfile */,
+				9B7D6DB023B27B1E0078DF21 /* BottomNavigationBar */,
+				9B3653BA239AB64B00E1BC58 /* Messenger */,
+				9BCA147C23849615000D03D7 /* ProfileData */,
+				9B311AAA236E62E200EA99A1 /* RadiusMap */,
+				9B39A4F923A6CC740070C4A7 /* Extensions */,
+			);
+			path = Radius;
+			sourceTree = "<group>";
+		};
+		9BC0564923BA9BB100D8538F /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				9BE2300923A85585008E355B /* ConnectionPreferencesViewController.swift */,
+				9BCEF3BE2394679800ED4B56 /* preferencesViewController.swift */,
+				9BAA8DD923997CE600810964 /* friendshipReligionViewController.swift */,
+				9B35F71B23956C8400A07C3C /* friendshipGenderViewController.swift */,
+				9B35F7192394BDAF00A07C3C /* datingReligionPreferencesViewController.swift */,
+				9B35F7172394AC9500A07C3C /* datingEthnicityPreferencesViewController.swift */,
+				9B298F5A23AC01520078B171 /* datingInterestsViewController.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		9BC7A8B423BBBF65006EAD38 /* UserAssistance */ = {
+			isa = PBXGroup;
+			children = (
+				9BAE8F3C23A14F780006B646 /* HelpCenterViewController.swift */,
+				9BAE8F3823A14D150006B646 /* AccountViewController.swift */,
+			);
+			path = UserAssistance;
+			sourceTree = "<group>";
+		};
+		9BCA147C23849615000D03D7 /* ProfileData */ = {
+			isa = PBXGroup;
+			children = (
+				9BAE8F3723A14C9B0006B646 /* Settings */,
+				9BC0564923BA9BB100D8538F /* Preferences */,
+				9BC7A8B423BBBF65006EAD38 /* UserAssistance */,
+			);
+			path = ProfileData;
+			sourceTree = "<group>";
+		};
+		9BD985DF2371FFA800881C75 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				9BB8AC782368BFF900BB6136 /* Assets.xcassets */,
+				9B149C12238DC4A3005315CB /* RadiusConceptFile.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		9BE1554F239C641500AE3BF6 /* SwipePages */ = {
+			isa = PBXGroup;
+			children = (
+				9BE15553239C641500AE3BF6 /* MainPageViewController.swift */,
+				9BE15554239C641500AE3BF6 /* PagesViewController.swift */,
+			);
+			path = SwipePages;
+			sourceTree = "<group>";
+		};
+		9BE85D4A2389F58400EDB08D /* Firebase Networking */ = {
+			isa = PBXGroup;
+			children = (
+				9B49CCC123CE94260090D72B /* HiddenVisible.swift */,
+				9BE85D4B2389F59800EDB08D /* FirebaseFunctions.swift */,
+			);
+			path = "Firebase Networking";
+			sourceTree = "<group>";
+		};
+		9BE85D4D2389F77400EDB08D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BE85D4E2389F78200EDB08D /* User.swift */,
+				9B18908023DBA77E00085337 /* GeofenceLocations.swift */,
+				9B63248423AFF18C0089639D /* PickerViewDataSources.swift */,
+				9BA692A623BC13A2009B66FF /* UserInfoCollectionViewCell.swift */,
+				9B72CA6F23E51720001C5754 /* InterestedInCollectionViewCollectionViewCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9BB8AC6B2368BFF600BB6136 /* Radius */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BB8AC962368BFF900BB6136 /* Build configuration list for PBXNativeTarget "Radius" */;
+			buildPhases = (
+				069825D39176D5414C3131D8 /* [CP] Check Pods Manifest.lock */,
+				9BB8AC682368BFF600BB6136 /* Sources */,
+				9BB8AC692368BFF600BB6136 /* Frameworks */,
+				9BB8AC6A2368BFF600BB6136 /* Resources */,
+				AB7FED1039A95D8B408EC8A8 /* [CP] Embed Pods Frameworks */,
+				7DAC0A171148362C01B93738 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Radius;
+			productName = Radius;
+			productReference = 9BA692A323BC10D1009B66FF /* Radius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BB8AC812368BFF900BB6136 /* RadiusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BB8AC992368BFF900BB6136 /* Build configuration list for PBXNativeTarget "RadiusTests" */;
+			buildPhases = (
+				A01571EDBCA612C1BA54511A /* [CP] Check Pods Manifest.lock */,
+				9BB8AC7E2368BFF900BB6136 /* Sources */,
+				9BB8AC7F2368BFF900BB6136 /* Frameworks */,
+				9BB8AC802368BFF900BB6136 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BB8AC842368BFF900BB6136 /* PBXTargetDependency */,
+			);
+			name = RadiusTests;
+			productName = RadiusTests;
+			productReference = 9BA692A423BC10D1009B66FF /* RadiusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9BB8AC8C2368BFF900BB6136 /* RadiusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BB8AC9C2368BFF900BB6136 /* Build configuration list for PBXNativeTarget "RadiusUITests" */;
+			buildPhases = (
+				1B1B21483BCF5CF19A5CBEAE /* [CP] Check Pods Manifest.lock */,
+				9BB8AC892368BFF900BB6136 /* Sources */,
+				9BB8AC8A2368BFF900BB6136 /* Frameworks */,
+				9BB8AC8B2368BFF900BB6136 /* Resources */,
+				BCEEAAE607DAB1E871BC1F86 /* [CP] Embed Pods Frameworks */,
+				AE496C4FBA56B996623A1504 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BB8AC8F2368BFF900BB6136 /* PBXTargetDependency */,
+			);
+			name = RadiusUITests;
+			productName = RadiusUITests;
+			productReference = 9BA692A523BC10D1009B66FF /* RadiusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9BB8AC642368BFF600BB6136 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Kassandra Capretta";
+				TargetAttributes = {
+					9BB8AC6B2368BFF600BB6136 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					9BB8AC812368BFF900BB6136 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 9BB8AC6B2368BFF600BB6136;
+					};
+					9BB8AC8C2368BFF900BB6136 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 9BB8AC6B2368BFF600BB6136;
+					};
+				};
+			};
+			buildConfigurationList = 9BB8AC672368BFF600BB6136 /* Build configuration list for PBXProject "Radius" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9BB8AC632368BFF600BB6136;
+			productRefGroup = 9BB8AC632368BFF600BB6136;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9BB8AC6B2368BFF600BB6136 /* Radius */,
+				9BB8AC812368BFF900BB6136 /* RadiusTests */,
+				9BB8AC8C2368BFF900BB6136 /* RadiusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9BB8AC6A2368BFF600BB6136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B1CFE942370FC380035CB73 /* GoogleService-Info.plist in Resources */,
+				9BB8AC792368BFF900BB6136 /* Assets.xcassets in Resources */,
+				9B2162B72374875900CACBA9 /* Launch Screen.storyboard in Resources */,
+				9BB8AC772368BFF600BB6136 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB8AC802368BFF900BB6136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB8AC8B2368BFF900BB6136 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		069825D39176D5414C3131D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Radius-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B1B21483BCF5CF19A5CBEAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Radius-RadiusUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DAC0A171148362C01B93738 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius/Pods-Radius-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius/Pods-Radius-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Radius/Pods-Radius-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01571EDBCA612C1BA54511A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadiusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB7FED1039A95D8B408EC8A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius/Pods-Radius-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius/Pods-Radius-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Radius/Pods-Radius-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE496C4FBA56B996623A1504 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCEEAAE607DAB1E871BC1F86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Radius-RadiusUITests/Pods-Radius-RadiusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9BB8AC682368BFF600BB6136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B9501672375E6090019E236 /* entryPageViewController.swift in Sources */,
+				9B72CA7023E51720001C5754 /* InterestedInCollectionViewCollectionViewCell.swift in Sources */,
+				9BE2300A23A85585008E355B /* ConnectionPreferencesViewController.swift in Sources */,
+				9B7D6DB223B27B480078DF21 /* HomeTabBarController.swift in Sources */,
+				9BE1555B239C641500AE3BF6 /* PageOneViewController.swift in Sources */,
+				9B298F5B23AC01520078B171 /* datingInterestsViewController.swift in Sources */,
+				9B18908123DBA77E00085337 /* GeofenceLocations.swift in Sources */,
+				9BB8AC742368BFF600BB6136 /* ViewController.swift in Sources */,
+				9B14C93823D25924002129C6 /* TestExtensions.swift in Sources */,
+				9BE85D4F2389F78200EDB08D /* User.swift in Sources */,
+				9B0D3600238234BE0074783C /* RDHiddenVisibleButton.swift in Sources */,
+				9BB8872823E1380000E30FC7 /* RadiusLocations.swift in Sources */,
+				9BB8AC702368BFF600BB6136 /* AppDelegate.swift in Sources */,
+				9BE15559239C641500AE3BF6 /* MainPageViewController.swift in Sources */,
+				9BD985DE2371F41200881C75 /* Utilities.swift in Sources */,
+				9BC4DBBA239C49B8003B8296 /* Ref.swift in Sources */,
+				9BD8214923B514920023CA22 /* LikePageViewController.swift in Sources */,
+				9B35F71C23956C8400A07C3C /* friendshipGenderViewController.swift in Sources */,
+				9B77F8E923A082650002885F /* QuestionsViewController.swift in Sources */,
+				9B39A4F823A69B7B0070C4A7 /* ViewProfileViewController.swift in Sources */,
+				9B2F9B3323D78A3700D9370A /* PopUpViewController.swift in Sources */,
+				9B3741ED23DCF48C005B1D57 /* RadiusMapLocationViewController.swift in Sources */,
+				9BE1555A239C641500AE3BF6 /* PagesViewController.swift in Sources */,
+				9B39A4FB23A6CC8C0070C4A7 /* BaseViewController.swift in Sources */,
+				9B35F71A2394BDAF00A07C3C /* datingReligionPreferencesViewController.swift in Sources */,
+				9B11F5892374950A00346D54 /* introductionTextViewController.swift in Sources */,
+				9B71FE90239B2B4000E9CF32 /* ChatLogViewController.swift in Sources */,
+				9BE2300C23A85E26008E355B /* FirebaseTest.swift in Sources */,
+				9B63248723AFFAAD0089639D /* UIImageView+Extensions.swift in Sources */,
+				9B63248523AFF18C0089639D /* PickerViewDataSources.swift in Sources */,
+				9BC3C88423807CA000802D62 /* informationViewController.swift in Sources */,
+				9B149C0F238D9707005315CB /* socialOptionsViewController.swift in Sources */,
+				9BB8AC722368BFF600BB6136 /* SceneDelegate.swift in Sources */,
+				9B1CFE8B2370B3CB0035CB73 /* loginViewController.swift in Sources */,
+				9B24A85C237DBF7C0047A395 /* PhotoUploadViewController.swift in Sources */,
+				9B2FF70D23A58C680084F412 /* EditQuestionsViewController.swift in Sources */,
+				9BAE8F3B23A14DC30006B646 /* SettingsViewController.swift in Sources */,
+				9B49A486239AF7D7001C0FC5 /* Model.xcdatamodeld in Sources */,
+				9B95016923761C580019E236 /* profilePageViewController.swift in Sources */,
+				9B49CCC223CE94260090D72B /* HiddenVisible.swift in Sources */,
+				9B055AB5238E275A00516AE7 /* datingOptionViewController.swift in Sources */,
+				9BC0564B23BA9C1000D8538F /* HiddenVisibleViewController.swift in Sources */,
+				9B49A483239AECBA001C0FC5 /* FriendsControllerHelper.swift in Sources */,
+				9BAA8DDA23997CE600810964 /* friendshipReligionViewController.swift in Sources */,
+				9BAE8F3923A14D150006B646 /* AccountViewController.swift in Sources */,
+				9B149C13238DC4A3005315CB /* RadiusConceptFile.swift in Sources */,
+				9BCEF3BF2394679800ED4B56 /* preferencesViewController.swift in Sources */,
+				9BE15558239C641500AE3BF6 /* PageFourViewController.swift in Sources */,
+				9B149C11238DC348005315CB /* socialOptionsIntroViewController.swift in Sources */,
+				9B3DAB8B23DD03C60018C0C4 /* AddGeotificationViewControllerDelegate.swift in Sources */,
+				9BA692A723BC13A3009B66FF /* UserInfoCollectionViewCell.swift in Sources */,
+				9B1CFE892370B3BB0035CB73 /* signupViewController.swift in Sources */,
+				9B8F8296239AB8B600EC3BE7 /* FriendsController.swift in Sources */,
+				9BE85D4C2389F59800EDB08D /* FirebaseFunctions.swift in Sources */,
+				9BE85D472389C6DA00EDB08D /* forgotPasswordViewController.swift in Sources */,
+				9B35F7182394AC9500A07C3C /* datingEthnicityPreferencesViewController.swift in Sources */,
+				9BD985D82371E53D00881C75 /* Constants.swift in Sources */,
+				9BAE8F3D23A14F780006B646 /* HelpCenterViewController.swift in Sources */,
+				9B3DAB8923DD036F0018C0C4 /* GeotificationsViewController.swift in Sources */,
+				9B71FE92239B376A00E9CF32 /* CustomTabBarViewController.swift in Sources */,
+				9B2FF70B23A58BA80084F412 /* EditProfileViewController.swift in Sources */,
+				9B21147A239F4986008385F8 /* Geotification.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB8AC7E2368BFF900BB6136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BB8AC892368BFF900BB6136 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9BB8AC842368BFF900BB6136 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BB8AC6B2368BFF600BB6136 /* Radius */;
+			targetProxy = 9BB8AC832368BFF900BB6136 /* PBXContainerItemProxy */;
+		};
+		9BB8AC8F2368BFF900BB6136 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9BB8AC6B2368BFF600BB6136 /* Radius */;
+			targetProxy = 9BB8AC8E2368BFF900BB6136 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9BB8AC752368BFF600BB6136 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BB8AC762368BFF600BB6136 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9BB8AC942368BFF900BB6136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9BB8AC952368BFF900BB6136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9BB8AC972368BFF900BB6136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C62F20A72EDEA9F295F412C2 /* Pods-Radius.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Radius/Radius.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = HLCC529T4B;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = Radius/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kassandracapretta.radiusapplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9BB8AC982368BFF900BB6136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A10C6CF3BAA08DC2FD78B6D /* Pods-Radius.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Radius/Radius.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = HLCC529T4B;
+				GCC_NO_COMMON_BLOCKS = NO;
+				INFOPLIST_FILE = Radius/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kassandracapretta.radiusapplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9BB8AC9A2368BFF900BB6136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABE5B552E11DA90C2DF751F /* Pods-RadiusTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HLCC529T4B;
+				INFOPLIST_FILE = RadiusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kassandracapretta.RadiusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radius.app/Radius";
+			};
+			name = Debug;
+		};
+		9BB8AC9B2368BFF900BB6136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 452968F29F6E4C83F5654BE6 /* Pods-RadiusTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HLCC529T4B;
+				INFOPLIST_FILE = RadiusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kassandracapretta.RadiusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radius.app/Radius";
+			};
+			name = Release;
+		};
+		9BB8AC9D2368BFF900BB6136 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA1EB7C6F342871AB0EAA40 /* Pods-Radius-RadiusUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HLCC529T4B;
+				INFOPLIST_FILE = RadiusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kassandracapretta.RadiusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Radius;
+			};
+			name = Debug;
+		};
+		9BB8AC9E2368BFF900BB6136 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA5C21CE0E4AEC76414DDB5 /* Pods-Radius-RadiusUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HLCC529T4B;
+				INFOPLIST_FILE = RadiusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kassandracapretta.RadiusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Radius;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BB8AC672368BFF600BB6136 /* Build configuration list for PBXProject "Radius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BB8AC942368BFF900BB6136 /* Debug */,
+				9BB8AC952368BFF900BB6136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BB8AC962368BFF900BB6136 /* Build configuration list for PBXNativeTarget "Radius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BB8AC972368BFF900BB6136 /* Debug */,
+				9BB8AC982368BFF900BB6136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BB8AC992368BFF900BB6136 /* Build configuration list for PBXNativeTarget "RadiusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BB8AC9A2368BFF900BB6136 /* Debug */,
+				9BB8AC9B2368BFF900BB6136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BB8AC9C2368BFF900BB6136 /* Build configuration list for PBXNativeTarget "RadiusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BB8AC9D2368BFF900BB6136 /* Debug */,
+				9BB8AC9E2368BFF900BB6136 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B49A484239AF7D7001C0FC5 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B49A485239AF7D7001C0FC5 /* Model.xcdatamodel */,
+			);
+			currentVersion = 9B49A485239AF7D7001C0FC5 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9BB8AC642368BFF600BB6136 /* Project object */;
+}

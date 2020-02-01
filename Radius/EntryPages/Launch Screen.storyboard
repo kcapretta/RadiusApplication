@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--launchScreen-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController title="launchScreen" id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2019 Kassandra Capretta. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
+                                <rect key="frame" x="75" y="786.5" width="264" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image-12" translatesAutoresizingMaskIntoConstraints="NO" id="VNl-qt-4ib">
+                                <rect key="frame" x="151" y="381" width="113.00000000000006" height="134"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="RADIUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn7-G2-idb">
+                                <rect key="frame" x="91" y="44" width="233" height="54"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
+                            <constraint firstItem="VNl-qt-4ib" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="ASW-Vt-RPj"/>
+                            <constraint firstItem="VNl-qt-4ib" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="LcH-dq-X7z"/>
+                            <constraint firstItem="sn7-G2-idb" firstAttribute="centerX" secondItem="VNl-qt-4ib" secondAttribute="centerX" id="SES-y0-3Oz"/>
+                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="75" id="SfN-ll-jLj"/>
+                            <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="89" id="Y44-ml-fuU"/>
+                            <constraint firstItem="VNl-qt-4ib" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="151" id="Yfh-p1-tu8"/>
+                            <constraint firstItem="sn7-G2-idb" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="91" id="hqv-2Z-bLQ"/>
+                            <constraint firstItem="sn7-G2-idb" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" id="jbx-BX-mPR"/>
+                            <constraint firstItem="VNl-qt-4ib" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="337" id="rEN-39-URY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image-12" width="322" height="370"/>
+    </resources>
+</document>
