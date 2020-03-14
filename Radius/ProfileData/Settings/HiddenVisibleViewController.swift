@@ -13,32 +13,23 @@ import FirebaseStorage
 
 class HiddenVisibleViewController: UIViewController {
 
+    // MARK:- Interface Builder
     // Pull data from Firebase
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
     var firebaseServer = FirebaseFunctions.shared
 
-    
+    // MARK:- Properties
     @IBOutlet weak var genderSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var ethnicitySegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var kidsSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var familyPlansSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var hometownSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var jobTitleSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var religionSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var educationSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var schoolSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var politicsSegmentControl: UISegmentedControl!
-    
     @IBOutlet weak var drinkingSegmentControl: UISegmentedControl!
     
     let userInfo: [VisibleItem] = [.gender, .ethnicity, .kids, .familyPlans, .homeTown, .jobTitle, .religion, .educationLevel, .school, .politics, .drinking]
@@ -55,16 +46,17 @@ class HiddenVisibleViewController: UIViewController {
     
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBAction func backTapped(_ sender: Any) {
         dismiss(animated: true)
     }
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUserInfoVisibility()
     }
     
+    // MARK:- Private Methods
     func updateUserInfoVisibility() {
         let gender = newUser.gender
         let ethnicity = newUser.ethnicity

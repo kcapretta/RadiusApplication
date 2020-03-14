@@ -27,7 +27,7 @@ class PopUpViewController: UIViewController, MFMailComposeViewControllerDelegate
     
     @IBOutlet weak var cancelTapped: UIButton!
     
-    @IBOutlet weak var myView: UIView!
+    @IBOutlet weak var initialView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,32 +38,32 @@ class PopUpViewController: UIViewController, MFMailComposeViewControllerDelegate
         // Animate View
             func showAnimate()
             {
-                self.myView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-                self.myView.alpha = 0.0;
+                self.initialView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+                self.initialView.alpha = 0.0;
                 UIView.animate(withDuration: 0.25, animations: {
-                    self.myView.alpha = 1.0
-                    self.myView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                    self.initialView.alpha = 1.0
+                    self.initialView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 });
             }
             
             func removeAnimate()
             {
                 UIView.animate(withDuration: 0.25, animations: {
-                    self.myView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-                    self.myView.alpha = 0.0;
+                    self.initialView.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+                    self.initialView.alpha = 0.0;
                 }, completion:{(finished : Bool) in if (finished)
                 {
-                    self.myView.removeFromSuperview()
+                    self.initialView.removeFromSuperview()
                     }
                 });
             }
             
             // Shadow on View
-            self.myView.layer.shadowColor = UIColor.gray.cgColor
-            self.myView.layer.shadowOpacity = 0.5
-            self.myView.layer.shadowOffset = CGSize(width: 2, height: 2)
-            self.myView.layer.shadowRadius = 6
-            self.myView.layer.masksToBounds = false
+            self.initialView.layer.shadowColor = UIColor.gray.cgColor
+            self.initialView.layer.shadowOpacity = 0.5
+            self.initialView.layer.shadowOffset = CGSize(width: 2, height: 2)
+            self.initialView.layer.shadowRadius = 6
+            self.initialView.layer.masksToBounds = false
         }
         
     @IBAction func sendReport(_ sender: Any) {

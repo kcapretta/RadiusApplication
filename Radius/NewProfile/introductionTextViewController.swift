@@ -11,14 +11,15 @@ import UIKit
 
 class introductionTextViewController: UIViewController {
 
+    // MARK:- Interface Builder
     @IBOutlet weak var nextScreen: UIButton!
-    
     @IBAction func linkTapped(_ sender: UIButton) {
         if let url = NSURL(string: "https://www.radiusapp.co/blog/end-user-license-agreement"){
             UIApplication.shared.open(url as URL)
         }
     }
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +35,7 @@ class introductionTextViewController: UIViewController {
             Utilities.styleFilledButton(nextScreen)
         }
     
+    // MARK:- Private Methods
     // Links to Community Guidelines
     @IBAction func guidelinesTapped(_ sender: UIButton) {
         if let url = NSURL(string: "https://www.radiusapp.co/blog/community-guidelines"){

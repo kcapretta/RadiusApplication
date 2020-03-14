@@ -9,11 +9,10 @@
 import UIKit
 
 class datingInterestsViewController: UIViewController {
-
+    
+    // MARK:- Interface Builder
     @IBOutlet weak var datingMenSelection: UIButton!
-    
     @IBOutlet weak var datingWomenSelection: UIButton!
-    
     @IBOutlet weak var openToAll: UIButton!
     
     var selectedButtons: [Int] = []
@@ -22,6 +21,7 @@ class datingInterestsViewController: UIViewController {
         updateColor(button: sender as! UIButton)
     }
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +30,7 @@ class datingInterestsViewController: UIViewController {
         Utilities.styleHollowButton(openToAll)
     }
     
+    // MARK:- Private Methods
     func updateColor(button: UIButton) {
         let tag = button.tag
         
@@ -41,9 +42,9 @@ class datingInterestsViewController: UIViewController {
             Utilities.styleFilledButton(button)
         }
     }
-
+    
     @IBAction func backToPreferences(_ sender: Any) {
         dismiss(animated: true)
     }
-
+    
 }

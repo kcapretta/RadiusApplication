@@ -15,52 +15,41 @@ import FirebaseStorage
 
 class ViewController: UIViewController {
     
+    // MARK:- Interface Builder
+    @IBOutlet weak var datingOutlet: UIButton!
+    @IBOutlet weak var friendshipOutlet: UIButton!
+    @IBOutlet weak var networkingOutlet: UIButton!
     @IBOutlet weak var mapOutlet: UIButton!
-    
-    @IBOutlet weak var interestedInCollectionView: UICollectionView!
-    
     @IBOutlet weak var infoCollectionView: UICollectionView!
-    
     @IBOutlet weak var viewOnData: UIView!
-    
     // pan down for more info on person
     // @IBOutlet var panDown: UIPanGestureRecognizer!
-    
     @IBOutlet weak var cardView: KolodaView!
-    
     // Labels to Pull Data
     @IBOutlet weak var nameLbl : UILabel!
     
+    // MARK:- Properties
     let images = ["download1","download2","download3"]
     let townImage = "Town"
     let bottomNavBar = MDCBottomNavigationBar()
     let firebaseServer = FirebaseFunctions.shared
-    
     // Block Button
     var currentUserId = Auth.auth().currentUser?.uid
     var otherUsersId = ""
     var isCurrentUserBlocked = false
     var isOtherUserBlocked = false
-    
     // Report Button
     var isCurrentUserReported = false
     var isOtherUserReported = false
-    
     var currentlyViewedUserId: String?
-    
-    
     var usersDict: [String: LocalUser] = [:]
     var users: [LocalUser] = []
-    
     var userDetails: [[UserDetail: String]] = []
-    var interestedInfo: [[InterestedInInfo: String]] = []
-    
     // Post
     var postData = [UISwitch]()
     
-
+    // MARK:- Private Methods
     // FILTER BLOCKED USERS
-    
     func filterBlockedUsers(from users: [LocalUser]) {
         var notBlockedUsers = users
         var notBlockedUsersDict = self.usersDict
@@ -75,8 +64,8 @@ class ViewController: UIViewController {
             if let user = usersDict[userId] {
                 notBlockedUsersDict.removeValue(forKey: userId)
                 /*if let blockedUserIndex = notBlockedUsers.firstIndex(where: { $0.userId! == userId }) {
-                    notBlockedUsers.remove(at: blockedUserIndex)
-                }*/
+                 notBlockedUsers.remove(at: blockedUserIndex)
+                 }*/
             }
         }
         let notBlocked = Array(notBlockedUsersDict.values)
@@ -84,7 +73,6 @@ class ViewController: UIViewController {
     }
     
     // FILTER REPORTED USERS
-    
     func filterReportUsers(from users: [LocalUser]) {
         var notReportUsers = users
         var notReportUsersDict = self.usersDict
@@ -104,21 +92,16 @@ class ViewController: UIViewController {
         self.users = notReport
     }
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Utilities.styleFilledButton(mapOutlet)
-        
         infoCollectionView.flashScrollIndicators()
-        interestedInCollectionView.flashScrollIndicators()
-        
         infoCollectionView.dataSource = self
         infoCollectionView.delegate = self
         cardView.delegate = self
         cardView.dataSource = self
-        
-        interestedInCollectionView.dataSource = self
-        interestedInCollectionView.delegate = self
         
         firebaseServer.fetchUsers {[weak self] (usersDict) in
             self?.usersDict = usersDict
@@ -136,24 +119,24 @@ class ViewController: UIViewController {
         self.viewOnData.layer.shadowOffset = CGSize(width: 2, height: 2)
         self.viewOnData.layer.shadowRadius = 7
         self.viewOnData.layer.masksToBounds = false
-
+        
         
         self.navigationController?.navigationBar.backgroundColor = .white
-
+        
         
         // Swipe gesture
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
-
+        
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-
+        
         let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture(gesture:)))
         swipeDown.direction = UISwipeGestureRecognizer.Direction.down
     }
-
-
     
+    
+    // MARK:- Private Methods
     func loadFirstUser() {
         if users.count > 0 {
             let imageView = UIImageView()
@@ -167,7 +150,6 @@ class ViewController: UIViewController {
             nameLbl.text = users[0].firstName
             setupDetailsFor(user: users[0])
             infoCollectionView.reloadData()
-            interestedInCollectionView.reloadData()
         }
     }
     
@@ -223,12 +205,12 @@ class ViewController: UIViewController {
         }
         
         if let visible = school?.visible, visible {
-                   userDetails.append([.school: school!.value.description])
-               }
+            userDetails.append([.school: school!.value.description])
+        }
         
         if let visible = religion?.visible, visible {
-                   userDetails.append([.religion: religion!.value.uiFriendlyDescription])
-               }
+            userDetails.append([.religion: religion!.value.uiFriendlyDescription])
+        }
         
         if let visible = education?.visible, visible {
             userDetails.append([.education: education!.value.uiFriendlyDescription])
@@ -237,18 +219,19 @@ class ViewController: UIViewController {
         self.userDetails = userDetails
     }
     
+    
     @IBAction func radiusNextVC(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let radiusVC = storyboard.instantiateViewController(identifier: "GeotificationsViewController")
-                self.navigationController?.pushViewController(radiusVC, animated: true)
-           
-
+        let radiusVC = storyboard.instantiateViewController(identifier: "GeotificationsViewController")
+        self.navigationController?.pushViewController(radiusVC, animated: true)
+        
+        
         let vc = CustomTabBarViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
-
+    
     // Change Birthdate to Age
     func calcAge(birthday: String) -> Int {
         let dateFormater = DateFormatter()
@@ -259,26 +242,26 @@ class ViewController: UIViewController {
         let calcAge = calendar.components(.year, from: birthdayDate!, to: now, options: [])
         let age = calcAge.year
         return age!
-    
-    
+        
+        
     }
     
     
     @objc
     func respondToSwipeGesture(gesture: UIGestureRecognizer) {
-
+        
         if let swipeGesture = gesture as? UISwipeGestureRecognizer {
-
-
+            
+            
             switch swipeGesture.direction {
             case UISwipeGestureRecognizer.Direction.right:
-                    print("Let's meet")
+                print("Let's meet")
             case UISwipeGestureRecognizer.Direction.down:
-                    print("My radius")
+                print("My radius")
             case UISwipeGestureRecognizer.Direction.left:
-                    print("No")
-                default:
-                    break
+                print("No")
+            default:
+                break
             }
         }
     }
@@ -294,6 +277,25 @@ class ViewController: UIViewController {
             }
         }
     }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return userDetails.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let infoCell = infoCollectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! UserInfoCollectionViewCell
+        var (userDetail, title) = userDetails[indexPath.item].first!
+        if userDetail == .birthday {
+            title = "\(calcAge(birthday: title))"
+        }
+        
+        infoCell.setupCell(with: userDetail, title: title)
+        return infoCell
+        
+    }
+    
 }
 
 extension ViewController : KolodaViewDelegate, KolodaViewDataSource {
@@ -335,58 +337,25 @@ extension ViewController : KolodaViewDelegate, KolodaViewDataSource {
         let user = users[index]
         setupDetailsFor(user: user)
         infoCollectionView.reloadData()
-        interestedInCollectionView.reloadData()
         
         
         nameLbl.text = user.firstName
-        }
     }
-
-
-extension ViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return userDetails.count
-        return interestedInInfo.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let infoCell = infoCollectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! UserInfoCollectionViewCell
-        var (userDetail, title) = userDetails[indexPath.item].first!
-        if userDetail == .birthday {
-            title = "\(calcAge(birthday: title))"
-        }
-        
-        infoCell.setupCell(with: userDetail, title: title)
-        return infoCell
-        
-    }
-    
-    func interestedInCollectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let interestedInCell = interestedInCollectionView.dequeueReusableCell(withReuseIdentifier: "infoCellId", for: indexPath) as! UserInfoCollectionViewCell
-        var (interestedInInfo, title) = interestedInfo[indexPath.item].first!
-    }
-    
-    interestedInCell.setupCell(with: InterestedInInfo, title: title)
-    return interestedInCell
-
-    
 }
-
-
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-      let padding: CGFloat = 8
-      let collectionCellSize = collectionView.frame.size.width - padding
-
-    return CGSize(width: collectionCellSize/1, height:22)
-
-     }
-
-     // Block User Button
-     @IBAction func blockTapped(_ sender: UIButton) {
+        
+        let padding: CGFloat = 8
+        let collectionCellSize = collectionView.frame.size.width - padding
+        
+        return CGSize(width: collectionCellSize/1, height:22)
+        
+    }
+    
+    // Block User Button
+    @IBAction func blockTapped(_ sender: UIButton) {
         if let userIdToBlock = currentlyViewedUserId {
             firebaseServer.blockSomeone(with: userIdToBlock) {[weak self] (error) in
                 if error == nil {
@@ -396,8 +365,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDelegateFlow
                 self?.showAlert(withTitle: "User Blocked", message: "You won't see this user again.")
             }
         }
-     }
-    
+    }
 }
 
 

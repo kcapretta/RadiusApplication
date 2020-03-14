@@ -13,6 +13,7 @@ import Firebase
 
 class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlowLayout, NSFetchedResultsControllerDelegate {
     
+    // MARK:- Properties
     private let cellId = "cellId"
     
     var friend: Friend? {
@@ -23,6 +24,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         }
     }
     
+    // MARK:- Private Methods
     let messageInputContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor.white
@@ -53,14 +55,14 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         let context = delegate.persistentContainer.viewContext
         
         let message = FriendsController.createMessageWithText(text: inputTextField.text!, friend: friend!, minutesAgo: 0, context: context, isSender: true)
-
+        
         do {
             //try context.save()
             messages?.append(message)
             let item = messages!.count - 1 
-//            let insertionIndexPath = IndexPath(item: item, section: 0)
-//            collectionView.insertItems(at: [insertionIndexPath])
-//            collectionView.scrollToItem(at: insertionIndexPath, at: .bottom, animated: true)
+            //            let insertionIndexPath = IndexPath(item: item, section: 0)
+            //            collectionView.insertItems(at: [insertionIndexPath])
+            //            collectionView.scrollToItem(at: insertionIndexPath, at: .bottom, animated: true)
             inputTextField.text = nil
             collectionView.reloadData()
         } catch let err {
@@ -119,15 +121,16 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
                 operation.start()
             }
             
-            }, completion: { (completed) in
-                
-                let lastItem = self.fetchedResultsController.sections![0].numberOfObjects - 1
-                let indexPath = NSIndexPath(item: lastItem, section: 0)
-                self.collectionView?.scrollToItem(at: indexPath as IndexPath, at: .bottom, animated: true)
-                
+        }, completion: { (completed) in
+            
+            let lastItem = self.fetchedResultsController.sections![0].numberOfObjects - 1
+            let indexPath = NSIndexPath(item: lastItem, section: 0)
+            self.collectionView?.scrollToItem(at: indexPath as IndexPath, at: .bottom, animated: true)
+            
         })
     }
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -180,14 +183,14 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
                 
                 self.view.layoutIfNeeded()
                 
-                }, completion: { (completed) in
-                    
-                    if isKeyboardShowing {
-                        let lastItem = self.messages?.count ?? 1 - 1
-                        let indexPath = NSIndexPath(item: lastItem, section: 0)
-                        self.collectionView?.scrollToItem(at: indexPath as IndexPath, at: .bottom, animated: true)
-                    }
-                    
+            }, completion: { (completed) in
+                
+                if isKeyboardShowing {
+                    let lastItem = self.messages?.count ?? 1 - 1
+                    let indexPath = NSIndexPath(item: lastItem, section: 0)
+                    self.collectionView?.scrollToItem(at: indexPath as IndexPath, at: .bottom, animated: true)
+                }
+                
             })
         }
     }
@@ -255,13 +258,11 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
                 
                 cell.profileImageView.isHidden = true
                 
-//                cell.textBubbleView.backgroundColor = UIColor(red: 0, green: 137/255, blue: 249/255, alpha: 1)
+                //                cell.textBubbleView.backgroundColor = UIColor(red: 0, green: 137/255, blue: 249/255, alpha: 1)
                 cell.bubbleImageView.image = ChatLogMessageCell.blueBubbleImage
                 cell.bubbleImageView.tintColor = UIColor(red: 0, green: 137/255, blue: 249/255, alpha: 1)
                 cell.messageTextView.textColor = UIColor.white
             }
-            
-            
             
         }
         
@@ -281,7 +282,7 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         return CGSize(width: view.frame.width, height: 100)
     }
     
- 
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt iinsetForSectionAtsection: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 8, left: 0, bottom: 0, right: 0)
@@ -300,7 +301,7 @@ class ChatLogMessageCell: BaseCell {
     
     let textBubbleView: UIView = {
         let view = UIView()
-//        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        //        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
         view.layer.cornerRadius = 15
         view.layer.masksToBounds = true
         return view

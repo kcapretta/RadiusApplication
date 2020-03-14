@@ -18,23 +18,23 @@ class entryPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpElements()
     }
     
     
     func setUpElements() {
-        
         Utilities.styleFilledButton(signupButton)
         Utilities.styleHollowButton(loginButton)
     }
     
-    
+    //MARK:- Private Methods
     @IBAction func signUp(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let signupVC = storyboard.instantiateViewController(identifier: "signupViewController")
         self.navigationController?.pushViewController(signupVC, animated: true)
     }
+    
     @IBAction func logIn(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginVC = storyboard.instantiateViewController(identifier: "loginViewController")

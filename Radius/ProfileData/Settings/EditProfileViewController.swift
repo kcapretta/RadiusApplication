@@ -12,6 +12,7 @@ import FirebaseStorage
 
 class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate {
     
+    // MARK:- Private Methods
     @IBAction func backButtonTapped(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -33,47 +34,32 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPicker
 
     }
     
+    // MARK:- Interface Builder
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
     @IBOutlet weak var genderTextField: UITextField!
-    
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var heightTextField: UITextField!
-    
     @IBOutlet weak var ethnicityTextField: UITextField!
-    
     @IBOutlet weak var birthdayTextField: UITextField!
-    
     @IBOutlet weak var kidsTextField: UITextField!
-    
     @IBOutlet weak var familyPlansTextField: UITextField!
-    
     @IBOutlet weak var hometownTextField: UITextField!
-    
     @IBOutlet weak var jobTitleTextField: UITextField!
-    
     @IBOutlet weak var religionTextField: UITextField!
-    
     @IBOutlet weak var educationTextField: UITextField!
-    
     @IBOutlet weak var schoolTextField: UITextField!
-    
     @IBOutlet weak var politicalTextField: UITextField!
-    
     @IBOutlet weak var drinkingTextField: UITextField!
     
+    // MARK:- Properties
     // Pull data from Firebase
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
-
     // Post as string
     var postData = [String]()
     
     // PICKER VIEW
-    
     let gender = PickerViewDataSource.gender
     let kids = PickerViewDataSource.kids
     let height = PickerViewDataSource.heights
@@ -107,6 +93,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPicker
     var selectedPolitics: String?
     var selectedDrinking: String?
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,6 +103,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIPicker
         
     }
     
+    // MARK:- Private Methods
     // Date Picker Date Changed
     @objc func dateChanged(datePicker: UIDatePicker) {
            

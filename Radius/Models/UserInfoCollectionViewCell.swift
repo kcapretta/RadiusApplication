@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Collection View
 class UserInfoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var infoIconImageView: UIImageView!
@@ -29,7 +30,7 @@ class UserInfoCollectionViewCell: UICollectionViewCell {
     }
 }
 
-
+// Images for Collection View
 enum InterestedInInfo {
     var icon: UIImage? {
         switch self {
@@ -51,7 +52,7 @@ enum InterestedInInfo {
 
 
 
-
+// Images for Collection View
 enum UserDetail {
     var icon: UIImage? {
         switch self {

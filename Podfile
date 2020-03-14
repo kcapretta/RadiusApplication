@@ -17,6 +17,7 @@ target 'Radius' do
   pod 'Firebase/Database'
  	pod 'Firebase/Storage'
 	pod 'ProgressHUD'
+	pod 'WARangeSlider'
 
   # Pods for Radius
 

@@ -12,18 +12,18 @@ import FirebaseAuth
 import ProgressHUD
 
 class forgotPasswordViewController: UIViewController {
-
-    @IBOutlet weak var resetPassword: UIButton!
     
+    // MARK:- Interface Builder
+    @IBOutlet weak var resetPassword: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let backButton = UIBarButtonItem()
         backButton.title = ""
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-        
         Utilities.styleFilledButton(resetPassword)
 
         func sendPasswordReset(withEmail email: String, _ callback: ((Error?) -> ())? = nil){
@@ -33,6 +33,7 @@ class forgotPasswordViewController: UIViewController {
         }
    }
     
+    // MARK:- Private Methods
     // Process "Forgot Password"
     @IBAction func resetPasswordButton(_ sender: Any) {
         guard let email = emailTextField.text, email != "" else {

@@ -10,10 +10,9 @@ import UIKit
 
 class friendshipGenderViewController: UIViewController {
     
+    // MARK:- Interface Builder
     @IBOutlet weak var menOption: UIButton!
-    
     @IBOutlet weak var womenOption: UIButton!
-    
     @IBOutlet weak var openToAll: UIButton!
     
     var selectedButtons:  [Int] = []
@@ -22,6 +21,7 @@ class friendshipGenderViewController: UIViewController {
         updateColor(button: sender)
     }
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +31,7 @@ class friendshipGenderViewController: UIViewController {
 
     }
     
+    // MARK:- Private Methods
     func updateColor(button: UIButton) {
     let tag = button.tag
     
@@ -48,5 +49,4 @@ class friendshipGenderViewController: UIViewController {
         dismiss(animated: true)
     
     }
-
 }

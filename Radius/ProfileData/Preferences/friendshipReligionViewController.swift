@@ -9,25 +9,17 @@
 import UIKit
 
 class friendshipReligionViewController: UIViewController {
-
+    
+    // MARK:- Interface Builder
     @IBOutlet weak var atheist: UIButton!
-    
     @IBOutlet weak var agnostic: UIButton!
-    
     @IBOutlet weak var buddhist: UIButton!
-    
     @IBOutlet weak var catholic: UIButton!
-    
     @IBOutlet weak var christian: UIButton!
-    
     @IBOutlet weak var hindu: UIButton!
-    
     @IBOutlet weak var jewish: UIButton!
-    
     @IBOutlet weak var muslim: UIButton!
-    
     @IBOutlet weak var spiritual: UIButton!
-    
     @IBOutlet weak var openToAll: UIButton!
     
     var selectedButtons: [Int] = []
@@ -36,6 +28,7 @@ class friendshipReligionViewController: UIViewController {
         updateColor(button: sender)
     }
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,6 +44,7 @@ class friendshipReligionViewController: UIViewController {
         Utilities.styleHollowButton(openToAll)
     }
     
+    // MARK:- Private Methods
     func updateColor(button: UIButton) {
         let tag = button.tag
         
@@ -62,8 +56,7 @@ class friendshipReligionViewController: UIViewController {
             Utilities.styleFilledButton(button)
         }
     }
-
-
+    
     @IBAction func backButtonVC7(_ sender: Any) {
         dismiss(animated: true)
     }

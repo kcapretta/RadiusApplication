@@ -12,8 +12,8 @@ import FirebaseStorage
 
 class socialOptionsViewController: UIViewController {
 
+    // MARK:- Interface Builder
     @IBOutlet weak var socialView: UIView!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // Tag to create separation in functions (see button below)
@@ -22,6 +22,7 @@ class socialOptionsViewController: UIViewController {
     
     let firebaseServer = FirebaseFunctions.shared
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +40,7 @@ class socialOptionsViewController: UIViewController {
         
     }
     
+    // MARK:- Private Methods
     // Button tag for Interested In
     @IBAction func switchPushed(_ sender: UISwitch) {
         guard let interest = options[sender.tag] else { return }

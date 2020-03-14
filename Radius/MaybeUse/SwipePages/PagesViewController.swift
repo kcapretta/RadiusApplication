@@ -12,7 +12,7 @@ class PagesViewController: UIPageViewController {
 
     internal lazy var pages: [UIViewController] = {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let pageOne = storyboard.instantiateViewController(identifier: "PageOneViewController")
+        let pageOne = storyboard.instantiateViewController(identifier: "FinalQuestionsViewController")
         let pageFour = storyboard.instantiateViewController(identifier: "PageFourViewController")
         
         return [pageOne, pageFour]

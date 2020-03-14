@@ -10,22 +10,18 @@ import UIKit
 import Firebase
 import FirebaseStorage
 
-class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerViewDelegate {
-
+class FinalQuestionsViewController: BaseViewController, UITextFieldDelegate, UIPickerViewDelegate {
+    
+    // MARK:- Interface Builder
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var schoolInput: UITextField!
-    
     @IBOutlet weak var educationText: UITextField!
-    
     @IBOutlet weak var politicalText: UITextField!
-    
     @IBOutlet weak var drinkingText: UITextField!
-    
     @IBOutlet weak var heightText: UITextField!
     
+    // MARK:- Properties
     let height = PickerViewDataSource.heights
-    
     let educationPicker = UIPickerView()
     let politicsPicker = UIPickerView()
     let drinkPicker = UIPickerView()
@@ -43,21 +39,20 @@ class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerVi
     var selectedDrinking: String?
     var selectedHeight: String?
     
-        override func viewDidLoad() {
+    // MARK:- ViewController LifeCycle Methods
+    override func viewDidLoad() {
         super.viewDidLoad()
-            
-            let backButton = UIBarButtonItem()
-            backButton.title = ""
-            self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-
-            
-         createEducationPicker()
-         createToolbar()
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
+        createEducationPicker()
+        createToolbar()
     }
     
-    
+    // MARK:- Private Methods
     @IBAction func next(_ sender: UIButton) {
-        
         guard let school = schoolInput.text,
             var education = educationText.text,
             var politics = politicalText.text,
@@ -67,13 +62,13 @@ class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerVi
                 return }
         
         if schoolInput.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-              educationText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
-              politicalText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            educationText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            politicalText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             heightText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             drinkingText.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-              
-              showAlert(withTitle: "Error", message: "Please fill in all fields")
-              return }
+            
+            showAlert(withTitle: "Error", message: "Please fill in all fields")
+            return }
         
         politics = politics.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").lowercased()
         education = education.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").lowercased()
@@ -96,7 +91,7 @@ class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerVi
             print("Done but with error ...", error)
         }
     }
-
+    
     
     func createEducationPicker() {
         educationPicker.delegate = self
@@ -116,40 +111,38 @@ class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerVi
         heightsPicker.backgroundColor = .white
     }
     
-        // Toolbar for "done"
-        func createToolbar() {
-            let toolBar = UIToolbar()
-            toolBar.sizeToFit()
-
-
-            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(PageOneViewController.dismissKeyboard))
-
-            toolBar.setItems([doneButton], animated: false)
-            toolBar.isUserInteractionEnabled = true
-
-            // Makes toolbar apply to text fields
-            educationText.inputAccessoryView = toolBar
-            politicalText.inputAccessoryView = toolBar
-            drinkingText.inputAccessoryView = toolBar
-            heightText.inputAccessoryView = toolBar
-            schoolInput.inputAccessoryView = toolBar
-        }
-
+    // Toolbar for "done"
+    func createToolbar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(FinalQuestionsViewController.dismissKeyboard))
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        // Makes toolbar apply to text fields
+        educationText.inputAccessoryView = toolBar
+        politicalText.inputAccessoryView = toolBar
+        drinkingText.inputAccessoryView = toolBar
+        heightText.inputAccessoryView = toolBar
+        schoolInput.inputAccessoryView = toolBar
+    }
+    
     @objc func dismissKeyboard() {
-            view.endEditing(true)
-        }
-    
-    
-    // Picker Extension
+        view.endEditing(true)
+    }
+
 }
 
-    extension PageOneViewController: UIPickerViewDataSource {
+// MARK:- Extension
+extension FinalQuestionsViewController: UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     // Counting Picker View
-    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
         case educationPicker: return education.count
@@ -161,7 +154,6 @@ class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerVi
     }
     
     // Rows
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
         case educationPicker:
@@ -185,8 +177,7 @@ class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerVi
         }
     }
     
-    // didSelect Function
-    
+    // Selection Function
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView {
         case educationPicker:
@@ -207,8 +198,9 @@ class PageOneViewController: BaseViewController, UITextFieldDelegate, UIPickerVi
             selectedEducation = education[row]
             educationText.text = selectedEducation
         } else if (pickerView == politicsPicker) {
+            
         }
-    
+        
     }
-
+    
 }

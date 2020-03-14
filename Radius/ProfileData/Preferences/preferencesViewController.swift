@@ -9,6 +9,7 @@
 import UIKit
 import QuartzCore
 import FirebaseDatabase
+import WARangeSlider
 
 class preferencesViewController: UIViewController {
     
@@ -38,6 +39,16 @@ class preferencesViewController: UIViewController {
     // Age Range Actions
     // Set age preferences
     @IBAction func datingAgeRangeButton(_ sender: Any) {
+        
+        
+        // install rangeSlider from here: https://github.com/warchimede/RangeSlider
+        
+//        let rangeSlider = RangeSlider(frame: frame)
+//        view.addSubView(rangeSlider)
+//        rangeSlider.addTarget(self, action: #selector(viewController.rangeSliderValueChanged(_:)),
+//                                 for: .valueChanged)
+        
+        
         datingAgeRangeLabel.text = String(Int(round(datingAgeRange.value)))
         }
     

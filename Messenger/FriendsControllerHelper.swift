@@ -7,14 +7,10 @@
 //
 
 import UIKit
-
 import CoreData
-
 import UIKit
 import FirebaseAuth
 import Firebase
-
-import CoreData
 
 extension FriendsController {
     func clearData() {
@@ -90,38 +86,38 @@ extension FriendsController {
     }
     
     func loadData() {
-           let delegate = UIApplication.shared.delegate as? AppDelegate
-           messages = [Message]()
-           if let context = delegate?.persistentContainer.viewContext {
-               if let friends = fetchFriends() {
-                   for friend in friends {
-                       let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Message")
-                       fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false) ]
-                       fetchRequest.predicate = NSPredicate(format: "friend.name = %@", friend.name!)
-                       fetchRequest.fetchLimit = 1
-                       do {
-                           let fetchedMessages = try context.fetch(fetchRequest) as? [Message]
-                           messages?.append(contentsOf: fetchedMessages!)
-                       } catch let err {
-                           print(err)
-                       }
-                   }
-                   messages = messages?.sorted(by: {$0.date!.compare($1.date!) == .orderedDescending})
-               }
-           }
-       }
-       private func fetchFriends() -> [Friend]? {
-           let delegate = UIApplication.shared.delegate as? AppDelegate
-           var friends: [Friend]? = [Friend]()
-           if let context = delegate?.persistentContainer.viewContext {
-               let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Friend")
-               do {
-                   friends = try context.fetch(fetchRequest) as? [Friend]
-                   return friends
-               } catch let err {
-                   print(err)
-               }
-           }
-           return nil
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        messages = [Message]()
+        if let context = delegate?.persistentContainer.viewContext {
+            if let friends = fetchFriends() {
+                for friend in friends {
+                    let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Message")
+                    fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false) ]
+                    fetchRequest.predicate = NSPredicate(format: "friend.name = %@", friend.name!)
+                    fetchRequest.fetchLimit = 1
+                    do {
+                        let fetchedMessages = try context.fetch(fetchRequest) as? [Message]
+                        messages?.append(contentsOf: fetchedMessages!)
+                    } catch let err {
+                        print(err)
+                    }
+                }
+                messages = messages?.sorted(by: {$0.date!.compare($1.date!) == .orderedDescending})
+            }
+        }
+    }
+    private func fetchFriends() -> [Friend]? {
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+        var friends: [Friend]? = [Friend]()
+        if let context = delegate?.persistentContainer.viewContext {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Friend")
+            do {
+                friends = try context.fetch(fetchRequest) as? [Friend]
+                return friends
+            } catch let err {
+                print(err)
+            }
+        }
+        return nil
     }
 }

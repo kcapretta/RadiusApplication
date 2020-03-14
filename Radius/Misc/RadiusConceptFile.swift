@@ -8,6 +8,12 @@
 
 import Foundation
 
+//MARK:- Interface Builder
+//MARK:- Properties
+//MARK:- ViewController LifeCycle Methods
+//MARK:- Private Methods
+
+
 //Firestore Functionality:
 //Create
 //Read

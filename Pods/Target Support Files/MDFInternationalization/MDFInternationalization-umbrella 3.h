@@ -10,11 +10,17 @@
 #endif
 #endif
 
+#import "MDFInternationalization 3.h"
 #import "MDFInternationalization.h"
+#import "MDFRTL 3.h"
 #import "MDFRTL.h"
+#import "NSLocale+MaterialRTL 3.h"
 #import "NSLocale+MaterialRTL.h"
+#import "NSString+MaterialBidi 3.h"
 #import "NSString+MaterialBidi.h"
+#import "UIImage+MaterialRTL 3.h"
 #import "UIImage+MaterialRTL.h"
+#import "UIView+MaterialRTL 3.h"
 #import "UIView+MaterialRTL.h"
 
 FOUNDATION_EXPORT double MDFInternationalizationVersionNumber;

@@ -14,22 +14,18 @@ import FirebaseDatabase
 
 class signupViewController: UIViewController {
 
+    //MARK:- Interface Builder
     @IBOutlet weak var firstNameTextField: UITextField!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var lastNameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var signupButton: UIButton!
-    
     @IBOutlet weak var errorLabel: UILabel!
     
     let firebaseServer = FirebaseFunctions.shared
     
+    //MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +36,7 @@ class signupViewController: UIViewController {
         setUpElements()
     }
     
+    //MARK:- Private Methods
     func setUpElements() {
         
         // Hide the error label
@@ -53,6 +50,7 @@ class signupViewController: UIViewController {
         Utilities.styleFilledButton(signupButton)
     }
     
+    // Currently not needed but might use later:
     // Check fields and validate
 //    func validateFields() -> String? {
 //
@@ -98,7 +96,6 @@ class signupViewController: UIViewController {
             showAlert(withTitle: "Error", message: "Please fill in all fields")
         return }
         
-        
         // Create the user, process data and go to next View Controller
         activityIndicator.startAnimating()
         firebaseServer.signUp(firstName: firstName, lastName: lastName, email: email, password: password) {[weak self] (user, error) in
@@ -106,8 +103,6 @@ class signupViewController: UIViewController {
             if let user = user {
                 newUser = user
             }
-            
-            
             
             if(error == nil) {
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -13,32 +13,24 @@ import FirebaseStorage
 
 class LikePageViewController: UIViewController {
     
+    // MARK:- Interface Builder
     @IBOutlet weak var infoIconImageView: UIImageView!
-    
     @IBOutlet weak var infoCollectionView: UIView!
-    
     @IBOutlet weak var viewOnData: UIView!
-    
     @IBOutlet weak var nameLabel: UILabel!
     
+    // MARK:- Properties
     let firebaseServer = FirebaseFunctions.shared
-    
     // "No" Button / Block Button
     var currentUserId = Auth.auth().currentUser?.uid
     var otherUsersId = ""
     var isCurrentUserBlocked = false
     var isOtherUserBlocked = false
-    
     var currentlyViewedUserId: String?
-    
-    
     var usersDict: [String: LocalUser] = [:]
     var users: [LocalUser] = []
-    
     var userDetails: [[UserDetail: String]] = []
     
-    
-
     func filterBlockedUsers(from users: [LocalUser]) {
         var notBlockedUsers = users
         var blockedUsers = newUser.blocked ?? [:]
@@ -47,6 +39,7 @@ class LikePageViewController: UIViewController {
             usersDict[currentUserId] = newUser
         }
         
+        // MARK:- Private Methods
         for (userId, blocked) in blockedUsers ?? [:] {
             if let user = usersDict[userId] {
                 if let blockedUserIndex = notBlockedUsers.firstIndex(where: { $0.userId == userId }) {
@@ -54,19 +47,19 @@ class LikePageViewController: UIViewController {
                 }
             }
         }
-        // THINGS GO HERE
         self.users = notBlockedUsers
     }
-
-   // var firstName: String = ""
     
+    // var firstName: String = ""
+    
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        nameLabel.text = user.firstName
-//
-//        infoCollectionView.dataSource = self
-//        infoCollectionView.delegate = self
+        //        nameLabel.text = user.firstName
+        //
+        //        infoCollectionView.dataSource = self
+        //        infoCollectionView.delegate = self
         
         firebaseServer.fetchUsers {[weak self] (usersDict) in
             let fetchedUsers = Array(usersDict.values)
@@ -80,12 +73,12 @@ class LikePageViewController: UIViewController {
         self.viewOnData.layer.shadowOffset = CGSize(width: 2, height: 2)
         self.viewOnData.layer.shadowRadius = 7
         self.viewOnData.layer.masksToBounds = false
-
+        
         
         self.navigationController?.navigationBar.backgroundColor = .white
     }
     
-    // Use???
+    // MARK:- Private Methods
     func loadFirstUser() {
         if users.count > 0 {
             let imageView = UIImageView()
@@ -154,12 +147,12 @@ class LikePageViewController: UIViewController {
         }
         
         if let visible = school?.visible, visible {
-                   userDetails.append([.school: school!.value.description])
-               }
+            userDetails.append([.school: school!.value.description])
+        }
         
         if let visible = religion?.visible, visible {
-                   userDetails.append([.religion: religion!.value.uiFriendlyDescription])
-               }
+            userDetails.append([.religion: religion!.value.uiFriendlyDescription])
+        }
         
         if let visible = education?.visible, visible {
             userDetails.append([.education: education!.value.uiFriendlyDescription])
@@ -182,88 +175,88 @@ class LikePageViewController: UIViewController {
     
     @IBAction func noTapped(_ sender: UIButton) {
         if let userIdToBlock = currentlyViewedUserId {
-        firebaseServer.blockSomeone(with: userIdToBlock) { (error) in
-            if error == nil {
-                newUser.blocked?[userIdToBlock] = true
+            firebaseServer.blockSomeone(with: userIdToBlock) { (error) in
+                if error == nil {
+                    newUser.blocked?[userIdToBlock] = true
                 }
             }
         }
-
+        
     }
-
+    
 }
 
 extension ViewController {
-
-//func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
-//    let currentUser = users[index]
-//    currentlyViewedUserId = currentUser.userId
-//    print("Index of current card ", index)
-//}
     
-//func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-//
-//    let imageView = UIImageView()
-//    let user = users[index]
-//    let storage = Storage.storage()
-//    let storageRef = storage.reference(withPath: "\(user.userId!)/photos/\(0)")
-//    PhotoUploader.downloadImageUrl(from: storageRef) { (url) in
-//        guard let url = url else { return }
-//        imageView.downloaded(from: url, contentMode: .scaleAspectFill)
-//    }
-//
-//    return imageView
-//}
-
-//func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-//    return users.count
-//}
-
-
-//func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
-//    switch direction {
-//    case .left: print("No")
-//    case .right: print("YES")
-//    default: print("Ignore")
-//        }
-//
-//    }
+    //func koloda(_ koloda: KolodaView, didShowCardAt index: Int) {
+    //    let currentUser = users[index]
+    //    currentlyViewedUserId = currentUser.userId
+    //    print("Index of current card ", index)
+    //}
+    
+    //func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
+    //
+    //    let imageView = UIImageView()
+    //    let user = users[index]
+    //    let storage = Storage.storage()
+    //    let storageRef = storage.reference(withPath: "\(user.userId!)/photos/\(0)")
+    //    PhotoUploader.downloadImageUrl(from: storageRef) { (url) in
+    //        guard let url = url else { return }
+    //        imageView.downloaded(from: url, contentMode: .scaleAspectFill)
+    //    }
+    //
+    //    return imageView
+    //}
+    
+    //func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
+    //    return users.count
+    //}
+    
+    
+    //func koloda(_ koloda: KolodaView, didSwipeCardAt index: Int, in direction: SwipeResultDirection) {
+    //    switch direction {
+    //    case .left: print("No")
+    //    case .right: print("YES")
+    //    default: print("Ignore")
+    //        }
+    //
+    //    }
     
     // Pull Data From Firebase For New User
-//    let user = users[index]
-//    setupDetailsFor(user: user)
-//    infoCollectionView.reloadData()
-//
-//
-//    extension ViewController: UICollectionViewDataSource {
-//        func infoCollectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//            return userDetails.count
-//        }
-        
-        func infoCollectionView(_ infoCollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = infoCollectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! UserInfoCollectionViewCell
-            var (userDetail, title) = userDetails[indexPath.item].first!
-            if userDetail == .birthday {
-                title = "\(calcAge(birthday: title))"
-            }
-            
-            cell.setupCell(with: userDetail, title: title)
-            return cell
+    //    let user = users[index]
+    //    setupDetailsFor(user: user)
+    //    infoCollectionView.reloadData()
+    //
+    //
+    //    extension ViewController: UICollectionViewDataSource {
+    //        func infoCollectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    //            return userDetails.count
+    //        }
+    
+    func infoCollectionView(_ infoCollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = infoCollectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! UserInfoCollectionViewCell
+        var (userDetail, title) = userDetails[indexPath.item].first!
+        if userDetail == .birthday {
+            title = "\(calcAge(birthday: title))"
         }
-    }
-
-
-    extension ViewController {
         
-        func infoCollectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-          let padding: CGFloat = 30
-          let collectionCellSize = collectionView.frame.size.width - padding
-
-        return CGSize(width: collectionCellSize/2, height:50)
-
-         }
-
+        cell.setupCell(with: userDetail, title: title)
+        return cell
     }
+}
+
+
+extension ViewController {
+    
+    func infoCollectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let padding: CGFloat = 30
+        let collectionCellSize = collectionView.frame.size.width - padding
+        
+        return CGSize(width: collectionCellSize/2, height:50)
+        
+    }
+    
+}
 
 

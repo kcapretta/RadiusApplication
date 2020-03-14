@@ -21,8 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        // Keyboard Optimization
        IQKeyboardManager.shared.enable = true
         
+        // User Location Authorization
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         let options: UNAuthorizationOptions = [.badge, .sound, .alert]
@@ -36,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
+        // Collection View Info
         let layout = UICollectionViewFlowLayout()
         let friendsController = FriendsController(collectionViewLayout: layout)
         window?.rootViewController = UINavigationController(rootViewController: friendsController)
@@ -47,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let signedIn = UserDefaults.standard.bool(forKey: "signedIn")
         
+        // MARK:- Important: Root View Controller if / if not signed in
         if(signedIn) {
             let HomeVC2 = storyboard.instantiateViewController(withIdentifier: "HomeTabBarController")
             self.window?.rootViewController = HomeVC2
@@ -58,8 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    // MAP Radius Function
-    
+    // Map Functionality
     func applicationDidBecomeActive(_ application: UIApplication) {
         application.applicationIconBadgeNumber = 0
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()

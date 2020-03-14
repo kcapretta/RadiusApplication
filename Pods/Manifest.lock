@@ -183,6 +183,7 @@ PODS:
   - pop (1.0.12)
   - ProgressHUD (2.70)
   - Protobuf (3.10.0)
+  - WARangeSlider (1.1.1)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -197,6 +198,7 @@ DEPENDENCIES:
   - MaterialComponents/BottomNavigation
   - MessageKit
   - ProgressHUD
+  - WARangeSlider
 
 SPEC REPOS:
   trunk:
@@ -233,6 +235,7 @@ SPEC REPOS:
     - pop
     - ProgressHUD
     - Protobuf
+    - WARangeSlider
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -268,7 +271,8 @@ SPEC CHECKSUMS:
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
+  WARangeSlider: 54b3e0853b8d16c444fd539005901aecee86837d
 
-PODFILE CHECKSUM: 297798ad09d0a5fe08e6c623f975b6fb10644714
+PODFILE CHECKSUM: e0d14d4088fbe3fe4d69f7aec23050b7a2bacda5
 
 COCOAPODS: 1.8.4

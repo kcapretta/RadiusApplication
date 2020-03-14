@@ -12,31 +12,29 @@ import FirebaseAuth
 
 class loginViewController: UIViewController, UITextFieldDelegate {
     
+    // MARK:- Interface Builder
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var loginButton: UIButton!
-    
     @IBOutlet weak var stackView: UIStackView!
-
     @IBOutlet weak var errorLabel: UILabel!
     
     let firebaseServer = FirebaseFunctions.shared
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Hide "Back" in Back Button
         let backButton = UIBarButtonItem()
         backButton.title = ""
-
+        
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         
         Utilities.styleFilledButton(loginButton)
         emailTextField.delegate = self
         passwordTextField.delegate = self
-       
+        
         setUpElements()
     }
     
@@ -44,17 +42,14 @@ class loginViewController: UIViewController, UITextFieldDelegate {
         // Hide the error label
         errorLabel.alpha = 0
     }
-
     
+    // MARK:- Private Methods
     @IBAction func loginTapped(_ sender: Any) {
-        
         // Create cleaned text fields
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        
         // Signing in the user
-        
         firebaseServer.signIn(email: email, password: password) { (user, error) in
             
             print("User Object", user)
@@ -73,13 +68,13 @@ class loginViewController: UIViewController, UITextFieldDelegate {
                 self.view.window?.makeKeyAndVisible()
             }
         }
-    
+        
     }
-
+    
     // Forgot Password, next View Controller
     @IBAction func forgotPW(_ sender: UIButton) {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let forgotPassword = storyboard.instantiateViewController(identifier: "forgotPasswordViewController")
-                self.navigationController?.pushViewController(forgotPassword, animated: true)
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let forgotPassword = storyboard.instantiateViewController(identifier: "forgotPasswordViewController")
+        self.navigationController?.pushViewController(forgotPassword, animated: true)
     }
+}

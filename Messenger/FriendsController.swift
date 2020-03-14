@@ -10,21 +10,22 @@ import UIKit
 
 class FriendsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    // MARK:- Properties
     private let cellId = "cellId"
-    
     var messages: [Message]?
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tabBarController?.tabBar.isHidden = false
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Recent"
         collectionView?.backgroundColor = UIColor.red
-
+        
         collectionView?.backgroundColor = UIColor.white
         collectionView?.alwaysBounceVertical = true
         
@@ -44,18 +45,18 @@ class FriendsController: UICollectionViewController, UICollectionViewDelegateFlo
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath as IndexPath) as! MessageCell
-
+        
         if let message = messages?[indexPath.item] {
             cell.message = message
         }
-
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 100)
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let layout = UICollectionViewFlowLayout()
         let controller = ChatLogController(collectionViewLayout: layout)

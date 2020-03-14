@@ -10,40 +10,34 @@ import UIKit
 
 
 class datingOptionViewController: BaseViewController, UIPickerViewDelegate {
-
+    
+    // MARK:- Interface Builder
     // Text Fields for Picker Views
-    
     @IBOutlet weak var familyPlansText: UITextField!
-    
     @IBOutlet weak var kidsOptionText: UITextField!
-    
     @IBOutlet weak var ethnicityText: UITextField!
-    
     @IBOutlet weak var menSelection: UIButton!
-    
     @IBOutlet weak var womenSelection: UIButton!
-    
     // Activity Indicator to process and save data
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    // MARK:- Properties
     var selectedGender:[Int] = []
-    
     let familyPlansPicker = UIPickerView()
     let kidsPicker = UIPickerView()
     let ethnicityPicker = UIPickerView()
-    
     let familyPlans = PickerViewDataSource.familyPlans
     let kids = PickerViewDataSource.kids
     let ethnicity = PickerViewDataSource.ethnicity
     
     let firebaseServer = FirebaseFunctions.shared
-    
     let pickerView = UIPickerView()
-
+    
     var selectedFamilyPlans: String?
     var selectedKids: String?
     var selectedEthnicity: String?
-
+    
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,9 +45,8 @@ class datingOptionViewController: BaseViewController, UIPickerViewDelegate {
         let backButton = UIBarButtonItem()
         backButton.title = ""
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-
         
-       createFamilyPicker()
+        createFamilyPicker()
         createToolbar()
         
         Utilities.styleHollowButton(menSelection)
@@ -61,6 +54,7 @@ class datingOptionViewController: BaseViewController, UIPickerViewDelegate {
         
     }
     
+    // MARK:- Private Methods
     // Buttons to select the gender you're interested in
     @IBAction func genderSelected(_ sender: UIButton) {
         if let index = selectedGender.firstIndex(of: sender.tag) {
@@ -85,7 +79,7 @@ class datingOptionViewController: BaseViewController, UIPickerViewDelegate {
         family = family.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").lowercased()
         kids = kids.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").lowercased()
         ethnicity = ethnicity.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").lowercased()
-            
+        
         let familyInfo = UserInfo(type: "family", value: FamilyPlans.valueFor(choice: family), visible: true)
         let kidsInfo = UserInfo(type: "kids", value: kids == "havekids", visible: true)
         let ethnicityInfo = UserInfo(type: "ethnicity", value: Ethnicity.valueFor(choice: ethnicity), visible: true)
@@ -106,8 +100,8 @@ class datingOptionViewController: BaseViewController, UIPickerViewDelegate {
             print("Saved details three... ", error)
         }
     }
-
-
+    
+    
     func createFamilyPicker() {
         
         familyPlansPicker.delegate = self
@@ -124,81 +118,81 @@ class datingOptionViewController: BaseViewController, UIPickerViewDelegate {
     }
     
     // Toolbar for "Done"
-        func createToolbar() {
-            let toolBar = UIToolbar()
-            toolBar.sizeToFit()
-
-            // "Done" Button for Toolbar on Picker View
-            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(PageOneViewController.dismissKeyboard))
-
-            toolBar.setItems([doneButton], animated: false)
-            toolBar.isUserInteractionEnabled = true
-
-            // Makes Toolbar Work Properly
-            familyPlansText.inputAccessoryView = toolBar
-            kidsOptionText.inputAccessoryView = toolBar
-            ethnicityText.inputAccessoryView = toolBar
-            
+    func createToolbar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        // "Done" Button for Toolbar on Picker View
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(FinalQuestionsViewController.dismissKeyboard))
+        
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        // Makes Toolbar Work Properly
+        familyPlansText.inputAccessoryView = toolBar
+        kidsOptionText.inputAccessoryView = toolBar
+        ethnicityText.inputAccessoryView = toolBar
+        
     }
-
-
+    
+    
     @objc func dismissKeyboard() {
-            view.endEditing(true)
+        view.endEditing(true)
+    }
+}
+
+// Extension on Dating Picker Views
+extension datingOptionViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView {
+        case familyPlansPicker: return familyPlans.count
+        case kidsPicker: return kids.count
+        case ethnicityPicker: return ethnicity.count
+        default: return 0
         }
     }
-
-        // Extension on Dating Picker Views
-       extension datingOptionViewController: UIPickerViewDataSource {
-            func numberOfComponents(in pickerView: UIPickerView) -> Int {
-                return 1
-            }
-            
-            func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-                switch pickerView {
-                case familyPlansPicker: return familyPlans.count
-                case kidsPicker: return kids.count
-                case ethnicityPicker: return ethnicity.count
-                default: return 0
-                }
-            }
-            
-            func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-                
-                switch pickerView{
-                case familyPlansPicker: selectedFamilyPlans = familyPlans[row]
-                familyPlansText.text = selectedFamilyPlans
-                    return familyPlans[row]
-                case kidsPicker:
-                    selectedKids = kids[row]
-                    kidsOptionText.text = selectedKids
-                    return kids[row]
-                case ethnicityPicker:
-                    selectedEthnicity = ethnicity[row]
-                    ethnicityText.text = selectedEthnicity
-                    return ethnicity[row]
-                default: return ""
-                }
-            }
-            
-            func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-                switch pickerView {
-                case familyPlansPicker:
-                    selectedFamilyPlans = familyPlans[row]
-                    familyPlansText.text = selectedFamilyPlans
-                case kidsPicker:
-                    selectedKids = kids[row]
-                    kidsOptionText.text = selectedKids
-                case ethnicityPicker:
-                    selectedEthnicity = ethnicity[row]
-                    ethnicityText.text = selectedEthnicity
-                default: print("Nothing...")
-                }
-                if(pickerView == familyPlansPicker) {
-                    selectedFamilyPlans = familyPlans[row]
-                    familyPlansText.text = selectedFamilyPlans
-                } else if (pickerView == familyPlansPicker) {
-                }
-
-            }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        switch pickerView{
+        case familyPlansPicker: selectedFamilyPlans = familyPlans[row]
+        familyPlansText.text = selectedFamilyPlans
+        return familyPlans[row]
+        case kidsPicker:
+            selectedKids = kids[row]
+            kidsOptionText.text = selectedKids
+            return kids[row]
+        case ethnicityPicker:
+            selectedEthnicity = ethnicity[row]
+            ethnicityText.text = selectedEthnicity
+            return ethnicity[row]
+        default: return ""
         }
-            
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView {
+        case familyPlansPicker:
+            selectedFamilyPlans = familyPlans[row]
+            familyPlansText.text = selectedFamilyPlans
+        case kidsPicker:
+            selectedKids = kids[row]
+            kidsOptionText.text = selectedKids
+        case ethnicityPicker:
+            selectedEthnicity = ethnicity[row]
+            ethnicityText.text = selectedEthnicity
+        default: print("Nothing...")
+        }
+        if(pickerView == familyPlansPicker) {
+            selectedFamilyPlans = familyPlans[row]
+            familyPlansText.text = selectedFamilyPlans
+        } else if (pickerView == familyPlansPicker) {
+        }
+        
+    }
+}
+

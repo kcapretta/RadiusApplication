@@ -13,15 +13,14 @@ import Firebase
 
 class PhotoUploadViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    
+    // MARK:- Interface Builder
     @IBOutlet weak var profileImageView: UIImageView!
-    
     @IBOutlet weak var containingView: UIView!
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let firebaseServer = FirebaseFunctions.shared
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,9 +41,7 @@ class PhotoUploadViewController: BaseViewController, UIImagePickerControllerDele
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
-        
         present(picker, animated: true, completion: nil)
-        
     }
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -54,11 +51,11 @@ class PhotoUploadViewController: BaseViewController, UIImagePickerControllerDele
         self.dismiss(animated: true, completion: nil)
     }
     
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
 
+    // MARK:- Private Methods
     // Confirm data, save and move to next View Controller
     @IBAction func nextVCInfo(_ sender: Any) {
         if let image = profileImageView.image,

@@ -15,25 +15,25 @@ class CityLocation: NSObject, MKAnnotation, MKMapViewDelegate {
     var coordinate: CLLocationCoordinate2D
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-    let circleRenderer = MKCircleRenderer(overlay: overlay)
-    circleRenderer.strokeColor = UIColor.red
-    circleRenderer.lineWidth = 2.0
-    return circleRenderer
+        let circleRenderer = MKCircleRenderer(overlay: overlay)
+        circleRenderer.strokeColor = UIColor.red
+        circleRenderer.lineWidth = 2.0
+        return circleRenderer
     }
     
     func showCircle(coordinate: CLLocationCoordinate2D, radius: CLLocationDistance, mapView: MKMapView) {
-           let circle = MKCircle(center: coordinate, radius: radius)
-           mapView.addOverlay(circle)
-       }
+        let circle = MKCircle(center: coordinate, radius: radius)
+        mapView.addOverlay(circle)
+    }
     
     init(title: String, coordinate: CLLocationCoordinate2D) {
         self.title = title
         self.coordinate = coordinate
- //       let regionRadius = 100.0
-            //       let circle = MKCircle(center: coordinate, radius: regionRadius)
-//        mapView.region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
-//        mapView.addOverlay(circle)
-//        mapView.region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        //       let regionRadius = 100.0
+        //       let circle = MKCircle(center: coordinate, radius: regionRadius)
+        //        mapView.region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+        //        mapView.addOverlay(circle)
+        //        mapView.region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
     }
-
+    
 }

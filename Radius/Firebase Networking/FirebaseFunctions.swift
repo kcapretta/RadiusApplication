@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 
-// SLICEONE
+// MARK:- SLICE ONE
 protocol FirebaseFunctionsProtocol {
     
     // SIGN UP
@@ -18,7 +18,7 @@ protocol FirebaseFunctionsProtocol {
     
     // SIGN IN
     func signIn(email: String, password: String, completion: @escaping (LocalUser?, Error?) -> Void)
-
+    
     func updateUserInfo(user: [String: Any])
     
     // PROFILE PICTURE
@@ -44,7 +44,7 @@ protocol FirebaseFunctionsProtocol {
     
     // FAMILY PLANS
     func setFamilyPlans(familyPlans: String, completion: @escaping (Error?) -> Void)
-   
+    
     // KIDS
     func setKids(kids: String, completion: @escaping (Error?) -> Void)
     
@@ -67,7 +67,7 @@ protocol FirebaseFunctionsProtocol {
     func setPolitics(politics: String, completion: @escaping (Error?) -> Void)
     
     // HEIGHT
-       func setHeight(height: String, completion: @escaping (Error?) -> Void)
+    func setHeight(height: String, completion: @escaping (Error?) -> Void)
     
     // HOMETOWN
     func setHometown(homeTown: String, completion: @escaping (Error?) -> Void)
@@ -90,81 +90,40 @@ protocol FirebaseFunctionsProtocol {
     // CHANGEMIND
     func setChangeMind(changeMind: String, completion: @escaping (Error?) -> Void)
     
-//    // TAKEPRIDE
-//    func setTakePride(takePride: String, completion: @escaping (Error?) -> Void)
-//
-//    // IMLOOKINGFOR
-//    func setImLookingFor(imLookingFor: String, completion: @escaping (Error?) -> Void)
-//
-//    // TOKNOW
-//    func setToKnow(toKnow: String, completion: @escaping (Error?) -> Void)
-    
     // DRINKING
     func setDrinking(drinking: String, completion: @escaping (Error?) -> Void)
     
-
-    // SLICETWO
-    // FUNCTIONS to save data
+    
+    // MARK:- SLICE TWO
+    // Functions to Save Data
     
     // HomeTown, Birthday, Gender, Job Title, Religion
     func savePersonalDetailsOne(_ hometown: UserInfo<String>, _ birthday: UserInfo<String>, _ gender: UserInfo<Gender>, _ jobtitle: UserInfo<String>, _ religion: UserInfo<Religion>, completion: @escaping (Error?) -> Void)
     
     // School, Education, Politics, Drink, Height
     func savePersonalDetailsTwo(_ school: UserInfo<String>, _ education: UserInfo<EducationLevel>, _ politics: UserInfo<Politics>, _ drink: UserInfo<Drink>, _ height: UserInfo<String>, completion: @escaping (Error?) -> Void)
- 
-     // Questions Input
+    
+    // Questions Input (Life Goal, Change Mind, Teach Me)
     func savePersonalDetailsQuestions(_ lifeGoal: UserInfo<String>, _ changeMind: UserInfo<String>, _ teachMe: UserInfo<String>, completion: @escaping (Error?) -> Void)
     
+    // The following are not currently being used:
     // _ takePride: UserInfo<String>, _ imLookingFor: UserInfo<String>, _ toKnow: UserInfo<String>,
-
+    
     // Family Plans, Kids, Ethnicity, Looking For
     func savePersonalDetailsThree(_ family: UserInfo<FamilyPlans>, _ kids: UserInfo<Bool>, _ ethnicity: UserInfo<Ethnicity>, _ lookingFor: UserInfo<LookingFor>, completion: @escaping (Error?) -> Void)
     
-    // Interested In Dating / Networking / Friendship
+    // Interested In: Dating / Networking / Friendship
     func saveInterestedIn(interestedIn: UserInfo<[InterestedIn]>,  completion: @escaping (Error?) -> Void)
     
-    // Account Pictures Functions
+    // Account Pictures Functions (1-6)
     func saveAccountPictures(_ accountPicture1: UserInfo<String>, _ accountPicture2: UserInfo<String>, _ accountPicture3: UserInfo<String>, _ accountPicture4: UserInfo<String>, _ accountPicture5: UserInfo<String>, _ accountPicture6: UserInfo<String>, completion: @escaping (Error?) -> Void)
     
     // Hidden / Visible
-    
     func setVisibility(visible: Bool, item: VisibleItem, completion: @escaping(Error?) -> Void)
 }
 
-// Repeated
-// Possible error
-
-//enum VisibleItem: CustomStringConvertible {
-//    var description: String {
-//        switch self {
-//        case .gender: return "gender"
-//        case .ethnicity: return "ethnicity"
-//        case .kids: return "kids"
-//        case .familyPlans: return "familyPlans"
-//        case .homeTown: return "homeTown"
-//        case .jobTitle: return "jobTitle"
-//        case .religion: return "religiousBeliefs"
-//        case .educationLevel: return "educationLevel"
-//        case .school: return "school"
-//        case .politics: return "politics"
-//        case .drinking: return "drinkValue"
-//        }
-//    }
-//
-//    case gender
-//    case ethnicity
-//    case kids
-//    case familyPlans
-//    case homeTown
-//    case jobTitle
-//    case religion
-//    case educationLevel
-//    case school
-//    case politics
-//    case drinkValue
-//}
-
-    // SLICETHREE
+// MARK:- SLICE THREE
+// Visibility Continued
 class FirebaseFunctions: FirebaseFunctionsProtocol {
     func setVisibility(visible: Bool, item: VisibleItem, completion: @escaping (Error?) -> Void) {
         let usersRef = db.child("users")
@@ -176,17 +135,17 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
         }
     }
     
-    
+    // Drinking
     func setDrinking(drinking: String, completion: @escaping (Error?) -> Void) {
         
     }
     
+    // Life Goal
     func setLifeGoal(lifeGoal: String, completion: @escaping (Error?) -> Void) {
         
     }
     
     // Report Someone
-    
     func reportSomeone(with userId: String, completion: @escaping (Error?) -> Void) {
         let usersRef = db.child("users")
         
@@ -198,20 +157,18 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
     }
     
     // Set Preferences for Reporting
-    
-       func reportPreferences(with userId: String, completion: @escaping (Error?) -> Void) {
-       let usersRef = db.child("users")
-           
-           if let uid = Auth.auth().currentUser?.uid {
-               usersRef.child("\(uid)/preferences/\(userId)").setValue(true) { (error, dbref) in
-                   completion(error)
-               }
-           }
-       }
+    func reportPreferences(with userId: String, completion: @escaping (Error?) -> Void) {
+        let usersRef = db.child("users")
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            usersRef.child("\(uid)/preferences/\(userId)").setValue(true) { (error, dbref) in
+                completion(error)
+            }
+        }
+    }
     
     
     // Block Someone
-    
     func blockSomeone(with userId: String, completion: @escaping (Error?) -> Void) {
         let usersRef = db.child("users")
         
@@ -224,7 +181,7 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
     
     // Set Preferences
     func blockPreferences(with userId: String, completion: @escaping (Error?) -> Void) {
-    let usersRef = db.child("users")
+        let usersRef = db.child("users")
         
         if let uid = Auth.auth().currentUser?.uid {
             usersRef.child("\(uid)/preferences/\(userId)").setValue(true) { (error, dbref) in
@@ -261,17 +218,18 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
         
     }
     
-//    func setTakePride(takePride: String, completion: @escaping (Error?) -> Void) {
-//
-//    }
+    // Will be used later:
+    //    func setTakePride(takePride: String, completion: @escaping (Error?) -> Void) {
+    //
+    //    }
     
-//    func setImLookingFor(imLookingFor: String, completion: @escaping (Error?) -> Void) {
-//
-//    }
+    //    func setImLookingFor(imLookingFor: String, completion: @escaping (Error?) -> Void) {
+    //
+    //    }
     
-//    func setToKnow(toKnow: String, completion: @escaping (Error?) -> Void) {
-//
-//    }
+    //    func setToKnow(toKnow: String, completion: @escaping (Error?) -> Void) {
+    //
+    //    }
     
     func setFamilyPlans(familyPlans: String, completion: @escaping (Error?) -> Void) {
         
@@ -330,38 +288,39 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
     }
     
     
-    
-    // Interested In Dating / Networking / Friendship
+    // Interested In: Dating / Networking / Friendship
     func saveInterest(interestedIn: UserInfo<[InterestedIn]>,  completion: @escaping (Error?) -> Void) {
         let usersRef = db.child("users")
         
         if let uid = Auth.auth().currentUser?.uid {
             newUser.interestedIn = interestedIn
-             usersRef.child("\(uid)").setValue(newUser.makeDictionary()){(error: Error?, ref: DatabaseReference) in
-                 print("Error ", error, ref)
-                 completion(error)
+            usersRef.child("\(uid)").setValue(newUser.makeDictionary()){(error: Error?, ref: DatabaseReference) in
+                print("Error ", error, ref)
+                completion(error)
             }
         }
     }
-
+    
     // Account Pictures
     func saveAccountPictures(_ accountPicture1: UserInfo<String>, _ accountPicture2: UserInfo<String>, _ accountPicture3: UserInfo<String>, _ accountPicture4: UserInfo<String>, _ accountPicture5: UserInfo<String>, _ accountPicture6: UserInfo<String>, completion: @escaping (Error?) -> Void) {
-           let usersRef = db.child("users")
-           
-           if let uid = Auth.auth().currentUser?.uid {
-               newUser.accountPicture1 = accountPicture1
-               newUser.accountPicture2 = accountPicture2
-               newUser.accountPicture3 = accountPicture3
-//               newUser.accountPicture4 = accountPicture4
-//               newUser.accountPicture5 = accountPicture5
-//               newUser.accountPicture6 = accountPicture5
-
-                usersRef.child("\(uid)").setValue(newUser.makeDictionary()){(error: Error?, ref: DatabaseReference) in
-                    print("Error ", error, ref)
-                    completion(error)
-               }
-           }
-       }
+        let usersRef = db.child("users")
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            newUser.accountPicture1 = accountPicture1
+            newUser.accountPicture2 = accountPicture2
+            newUser.accountPicture3 = accountPicture3
+            // To be used later:
+            //               newUser.accountPicture4 = accountPicture4
+            //               newUser.accountPicture5 = accountPicture5
+            //               newUser.accountPicture6 = accountPicture5
+            
+            usersRef.child("\(uid)").setValue(newUser.makeDictionary()){(error: Error?, ref: DatabaseReference) in
+                print("Error ", error, ref)
+                completion(error)
+            }
+        }
+    }
+    // To be used later:
     // _ takePride: UserInfo<String>, _ looking: UserInfo<String>,  _ aboutYou: UserInfo<String>
     // Life Goals, Teach Me, Change Mind, Take Pride, Looking, About You
     func savePersonalDetailsQuestions(_ lifeGoal: UserInfo<String>, _ teachMe: UserInfo<String>, _ changeMind: UserInfo<String>, completion: @escaping (Error?) -> Void) {
@@ -374,10 +333,10 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
             // newUser.imLookingFor = looking
             // newUser.toKnow = aboutYou
             newUser.changeMind = changeMind
-
-             usersRef.child("\(uid)").setValue(newUser.makeDictionary()){(error: Error?, ref: DatabaseReference) in
-                 print("Error ", error, ref)
-                 completion(error)
+            
+            usersRef.child("\(uid)").setValue(newUser.makeDictionary()){(error: Error?, ref: DatabaseReference) in
+                print("Error ", error, ref)
+                completion(error)
             }
         }
     }
@@ -392,7 +351,7 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
             newUser.kids = kids
             newUser.lookingFor = lookingFor
             newUser.ethnicity = ethnicity
-       
+            
             usersRef.child("\(uid)").setValue(newUser.makeDictionary()){(error: Error?, ref: DatabaseReference) in
                 print("Error ", error, ref)
                 completion(error)
@@ -419,8 +378,9 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
         }
     }
     
-    // SLICEFOUR
-    // SIGN UP FUNCTION, first name, last name, email, password
+    // MARK:- SLICE FOUR
+    // SIGN UP functionality
+    // First Name, Last Name, Email, Password
     let db = Database.database().reference()
     func signUp(firstName: String, lastName: String, email: String, password: String, completion: @escaping (LocalUser?, Error?) -> Void) {
         let usersRef = db.child("users")
@@ -438,28 +398,29 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
         }
     }
     
-    // SIGN IN FUNCTION, email, password
+    // SIGN IN functionality
+    // Email, Password
     func signIn(email: String, password: String, completion: @escaping (LocalUser?, Error?) -> Void) {
         let usersRef = db.child("users")
         Auth.auth().signIn(withEmail: email, password: password) { [weak self]
-                (result, error) in
-                guard let user = result?.user else {
+            (result, error) in
+            guard let user = result?.user else {
+                completion(nil, error)
+                return
+            }
+            
+            let uid = user.uid
+            
+            usersRef.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? [String: Any]
+                if let user = value {
+                    let userObject = LocalUser.makeObjectFrom(user)
+                    newUser = userObject
+                    completion(userObject, nil)
+                } else {
                     completion(nil, error)
-                    return
                 }
-                
-                let uid = user.uid
-                
-                usersRef.child(uid).observeSingleEvent(of: .value) { (snapshot) in
-                    let value = snapshot.value as? [String: Any]
-                    if let user = value {
-                        let userObject = LocalUser.makeObjectFrom(user)
-                        newUser = userObject
-                        completion(userObject, nil)
-                    } else {
-                        completion(nil, error)
-                    }
-                }
+            }
         }
     }
     
@@ -483,9 +444,9 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
         }
     }
     
-    //SLICEFIVE
+    // MARK:- SLICE FIVE
     func updateUserInfo(user: [String : Any]) {
-
+        
     }
     
     func setGender(gender: String, completion: @escaping (Error?) -> Void){
@@ -498,7 +459,7 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
     }
     
     func uploadProfilePicture(pictureUrl: String) {
-
+        
     }
     
     func uploadAccountPictures(pictureUrl: String) {
@@ -518,7 +479,7 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
     }
     
     func updateLocation(long: Double, lat: Double) {
-    
+        
     }
     
     func listNearbyPeople() {
@@ -526,5 +487,5 @@ class FirebaseFunctions: FirebaseFunctionsProtocol {
     }
     
     static let shared: FirebaseFunctions = FirebaseFunctions()
-
+    
 }

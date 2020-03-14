@@ -10,7 +10,9 @@ import UIKit
 
 class socialOptionsIntroViewController: UIViewController {
 
+    // MARK:- Interface Builder
     @IBOutlet weak var soundsGood: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,7 @@ class socialOptionsIntroViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 
+    // MARK:- Private Methods
     @IBAction func nextTextVC(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nextSocialOptions = storyboard.instantiateViewController(identifier: "socialOptionsViewController")

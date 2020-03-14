@@ -12,24 +12,26 @@ import FirebaseDatabase
 
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate {
     
+    // MARK:- Properties
     var databaseHandle:DatabaseHandle?
     var currentlySettingImageViewTag: Int?
-    
     let firebaseServer = FirebaseFunctions.shared
     
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         showProfilePicture()
     }
     
+    // MARK:- Private Methods
     func showProfilePicture() {
         if let uid = Auth.auth().currentUser?.uid {
-                    let storage = Storage.storage()
-                    let storageRef = storage.reference(withPath: "\(uid)/photos/\(0)")
-                    PhotoUploader.downloadImageUrl(from: storageRef) {[weak self] (url) in
-                        guard let url = url else { return }
-                        self?.displayProfileImage.downloaded(from: url, contentMode: .scaleAspectFill)
-                    }
+            let storage = Storage.storage()
+            let storageRef = storage.reference(withPath: "\(uid)/photos/\(0)")
+            PhotoUploader.downloadImageUrl(from: storageRef) {[weak self] (url) in
+                guard let url = url else { return }
+                self?.displayProfileImage.downloaded(from: url, contentMode: .scaleAspectFill)
+            }
         } else {
             showAlert(withTitle: "Error", message: "Not signed in")
         }
@@ -57,8 +59,8 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate 
     
     @IBAction func startEditProfile(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let backBVC13 = storyboard.instantiateViewController(identifier: "profilePageViewController")
-            self.navigationController?.pushViewController(backBVC13, animated: true)
+        let backBVC13 = storyboard.instantiateViewController(identifier: "profilePageViewController")
+        self.navigationController?.pushViewController(backBVC13, animated: true)
     }
 }
 

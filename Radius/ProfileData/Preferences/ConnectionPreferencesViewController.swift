@@ -11,20 +11,20 @@ import FirebaseDatabase
 
 class ConnectionPreferencesViewController: UIViewController {
     
+    // MARK:- Interface Builder
     @IBOutlet weak var datingSwitched: UISwitch!
-    
     @IBOutlet weak var networkingSwitched: UISwitch!
-    
     @IBOutlet weak var friendshipSwitched: UISwitch!
     
+    // MARK:- Properties
     // Pull data from Firebase
     var ref:DatabaseReference?
     var databaseHandle:DatabaseHandle?
     var firebaseServer = FirebaseFunctions.shared
-
     // Post
     var postData = [UISwitch]()
 
+    // MARK:- ViewController LifeCycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +33,7 @@ class ConnectionPreferencesViewController: UIViewController {
 
     }
     
-    
+    // MARK:- Private Methods
     func setDefaultSelections() {
         if let interests = newUser.interestedIn?.value {
             interests.forEach { (interestedIn) in
@@ -46,7 +46,6 @@ class ConnectionPreferencesViewController: UIViewController {
         }
         
     }
-    
   
     @IBAction func backButtonTapped(_ sender: UIButton) {
     dismiss(animated: true)
