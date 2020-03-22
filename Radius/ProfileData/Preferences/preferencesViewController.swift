@@ -13,8 +13,8 @@ import WARangeSlider
 
 class preferencesViewController: UIViewController {
     
-    // For Age Range, after MVP
-    // Pull data from Firebase
+//     For Age Range, after MVP
+//     Pull data from Firebase
 //    var ref:DatabaseReference?
 //    var databaseHandle:DatabaseHandle?
 
