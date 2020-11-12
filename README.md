@@ -87,19 +87,19 @@ THE PREMISE
 
 I was out one night with my cousin and some friends. I had a beer in my hand at the bar and I found myself looking around at all of the different people. I began to wonder: was there anyone in this room who was as interested in code as me? Someone who wanted to talk about it? It got me thinking: why couldn’t there be an app where I could connect with other people within my radius? Find a date at the bar next door and find a friend who knows the best taco truck in town? I could make the night whatever I wanted it to be based on who I wanted meet — and it could be practically instant.
 
-BUILDING OUT THE IDEA
+## BUILDING OUT THE IDEA
 
 First I researched to see if there was anything close to what I had in mind. So far no. Then, I had to further flesh out what made my app unique. Yes, I wanted radiuses, but where? And did time of day matter? All of these things had to be fully thought-out and structured.
 
-THE DESIGN
+## THE DESIGN
 
 Because there is no funding behind this idea and I am the only designer / developer, I was able to be a little lax with the design itself. For example, I changed the color scheme three times before I finally decided on what I wanted. I created almost zero designs of the view controllers before building them — having the idea in the my head was “good enough.”
 
-THE END IN MIND
+## THE END IN MIND
 
 I was not sure what this app would become. Maybe it would be an instant hit? (By “instant” I mean one or two years tops) Or maybe someone would try to buy my app immediately. Either way, I decided to build like I would be giving this application to someone else. AKA, make sure it’s thorough and well thought out, with a lot of descriptions along the way of what steps I was taking.
 
-THE STEPS TAKEN
+## THE STEPS TAKEN
 
 Here’s the meat of this blog. I’m going to break down the code as much as possible. I’m hoping to go back someday soon and create a COMPLETE breakdown (think, “Dummies Guide to Building an Entire App from Scratch with Absolutely no Experience”) — but until then, this will do.
 
