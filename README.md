@@ -30,50 +30,6 @@ Radius is a dating, networking, and friendship application. My main idea behind 
 
 - Geofencing and finding current location
 
-Firestore Functionality:
-Create
-Read
-Update
-Delete
-1. Images
-2. User Info
-3. User Signup / Login
-Images
-Profile picture
-Account pictures/User images
-Swipe view
-User Info
-Profile page, including questions and vitals
-Match someone
-Deny someone
-Chat with someone
-List matches
-List intentions (dating, networking, friendship)
-Flow Structure of Radius:
-Signup
-
-Onboarding Introduction
-
-Gathering User Information
-
-Upload Profile Picture
-
-Allow Location Use
-
-Answer Questions
-
-Edit Profile
-
-Login / Forgot Password
-
-Radius Screen (geofencing bars and coffee shops)
-
-Select Radius / Swipe Screen
-
-Match / Deny
-
-Messenger
-
 Additonally:
 Edit Preferences
 View Likes
@@ -82,8 +38,35 @@ Edit Questions
 View Your Profile
 Contact Help Center
 Reach Website
+
+Firestore Functionality:
+
+- Create
+- Read
+- Update
+- Delete
+1. Images
+2. User Info
+3. User Signup / Login
+- Images
+- Profile Picture
+- Account Pictures / User Images
+- Swipe View
+- User Info
+- Profile page, including questions and vitals
+- Match Someone
+- Deny Someone
+- Chat with Someone
+- List Matches
+- List Intentions (dating, networking, friendship)
+- Flow Structure of Radius:
+- Signup
+
+
+
 The Full Account From Start to Finish as Follows:
-THE PREMISE
+
+## THE PREMISE
 
 I was out one night with my cousin and some friends. I had a beer in my hand at the bar and I found myself looking around at all of the different people. I began to wonder: was there anyone in this room who was as interested in code as me? Someone who wanted to talk about it? It got me thinking: why couldn’t there be an app where I could connect with other people within my radius? Find a date at the bar next door and find a friend who knows the best taco truck in town? I could make the night whatever I wanted it to be based on who I wanted meet — and it could be practically instant.
 
