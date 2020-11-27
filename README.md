@@ -114,7 +114,7 @@ Create the code for this data to be populated from Firebase for a seamless integ
 
 Allow to filters to be used through on / off buttons, creating a better user experience
 
-User Interaction:
+What I'm Working on Now:
 
 Hard code a messenger from start to finish for a more reliable layout for messaging and connect this to Firebase (the other option would be to use an Xcode boilerplant messenger option)
 
