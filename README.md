@@ -1,10 +1,10 @@
 # RadiusApplication
 
-# A video tutorial of this app is here: https://youtu.be/uDEzVXiJA58
+### A video tutorial of this app is here: https://youtu.be/uDEzVXiJA58
 
-# Find out more about the design of this application here: https://kassandracapretta.com/casestudies#/radius/
+### Find out more about the design of this application here: https://kassandracapretta.com/casestudies#/radius/
 
-# Watch me explain the application and the process here: https://www.youtube.com/watch?v=TowBPLXDwuY&feature=youtu.be
+### Watch me explain the application and the process here: https://www.youtube.com/watch?v=TowBPLXDwuY&feature=youtu.be
 
 Radius is a dating, networking, and friendship application. My main idea behind this app is to create accessibility to new people wherever you are — designing a way to meet with people you're already near within a bar, coffee shop, or other commercial establishments.
 
