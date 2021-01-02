@@ -5,7 +5,7 @@
 
 Radius is a dating, networking, and friendship application. My main idea behind this app is to create accessibility to new people wherever you are — designing a way to meet with people you're already near within a bar, coffee shop, or other commercial establishments.
 
-
+https://github.com/kcapretta/RadiusApplication/blob/39aa521c55b93722631073c97c028cadfb5b3d33/Screen%20Shot%202021-01-01%20at%206.17.28%20PM.png
 
 ## These are the main functions of the application:
 
