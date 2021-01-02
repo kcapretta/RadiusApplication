@@ -29,16 +29,15 @@ Radius is a dating, networking, and friendship application. My main idea behind 
 
 - Geofencing and finding current location
 
-Additonally:
-Edit Preferences
-View Likes
-Edit Profile
-Edit Questions
-View Your Profile
-Contact Help Center
-Reach Website
+- Edit preferences and profile
 
-Firestore Functionality:
+- View likes and matches
+
+- View profile
+
+- Contact Help Center
+
+## Firestore Functionality:
 
 - Create
 - Read
@@ -62,9 +61,6 @@ Firestore Functionality:
 - Signup
 
 
-
-The Full Account From Start to Finish as Follows:
-
 ## The Premise
 
 I was out one night with my cousin and some friends. I had a beer in my hand at the bar and I found myself looking around at all of the different people. I began to wonder: was there anyone in this room who was as interested in code as me? Someone who wanted to talk about it? It got me thinking: why couldn’t there be an app where I could connect with other people within my radius? Find a date at the bar next door and find a friend who knows the best taco truck in town? I could make the night whatever I wanted it to be based on who I wanted meet — and it could be practically instant.
@@ -85,7 +81,8 @@ I was not sure what this app would become. Maybe it would be an instant hit? (By
 
 Here’s the meat of this blog. I’m going to break down the code as much as possible. I’m hoping to go back someday soon and create a COMPLETE breakdown (think, “Dummies Guide to Building an Entire App from Scratch with Absolutely no Experience”) — but until then, this will do.
 
-Sign up / Sign in Authentication:
+## Sign up / Sign in Authentication:
+
 All corresponding authentication pages can be found here
 
 Design entryPageViewController, loginViewController, signupViewController, and forgotPasswordViewController
@@ -96,7 +93,8 @@ Take a look at Firebase Functions to understand how this connection was coded
 
 Create forgotPassword as a functioning View Controller which sends an email when this is triggered
 
-New User Sign Up:
+## New User Sign Up:
+
 Create a thorough group of View Controllers that interact with the user: asking questions, confirming uploads and retrieving vitals about the new account
 
 Develop picker views to give options to new users
@@ -105,7 +103,7 @@ Connect all of this new data to Firebase
 
 Make profile pictures upload properly from phone to application and then to Firebase
 
-Edit Profile:
+## Edit Profile:
 
 Implement entire profile to be edited
 
@@ -113,7 +111,7 @@ Create the code for this data to be populated from Firebase for a seamless integ
 
 Allow to filters to be used through on / off buttons, creating a better user experience
 
-What I'm Working on Now:
+## What I'm Working on Now:
 
 Hard code a messenger from start to finish for a more reliable layout for messaging and connect this to Firebase (the other option would be to use an Xcode boilerplant messenger option)
 
