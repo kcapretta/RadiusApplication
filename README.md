@@ -112,6 +112,8 @@ Create the code for this data to be populated from Firebase for a seamless integ
 
 Allow to filters to be used through on / off buttons, creating a better user experience
 
+![alt text]https://github.com/kcapretta/RadiusApplication/blob/39aa521c55b93722631073c97c028cadfb5b3d33/Screen%20Shot%202021-01-01%20at%206.18.47%20PM.png
+
 ## What I'm Working on Now:
 
 Hard code a messenger from start to finish for a more reliable layout for messaging and connect this to Firebase (the other option would be to use an Xcode boilerplant messenger option)
